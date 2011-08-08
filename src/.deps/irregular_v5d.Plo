@@ -1,0 +1,3 @@
+irregular_v5d.lo irregular_v5d.o: irregular_v5d.c ../config.h
+
+../config.h:

@@ -1,0 +1,1460 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Installing Vis5D</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="Vis5D Documentation"
+HREF="book1.html"><LINK
+REL="UP"
+TITLE="System Requirements and Installation"
+HREF="ch02.html"><LINK
+REL="PREVIOUS"
+TITLE="System Requirements and Installation"
+HREF="ch02.html"><LINK
+REL="NEXT"
+TITLE="Putting Your Data Into Vis5D "
+HREF="ch03.html"><META
+http-equiv="Content-Type"
+content="text/html; charset="></HEAD
+><BODY
+CLASS="SECT1"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Vis5D Documentation</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="ch02.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 2. System Requirements and Installation</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="ch03.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="CH02SEC2"
+>Installing Vis5D</A
+></H1
+><P
+>	Before installing Vis5D, you may want to download the
+following:</P
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="CH02SEC2.1"
+>Mesa</A
+></H2
+><P
+>	  Mesa is a free OpenGL replacement, and is <SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>required</I
+></SPAN
+> if your
+system does not already have OpenGL, IrisGL, or PEX (an old 3d library
+for X).  If you don't know whether you have Mesa or one of these other
+libraries, you can skip this step for now; when you try to configure
+Vis5D 
+(in <A
+HREF="ch02sec2.html#CH02SEC2.3"
+>section 2.2.3</A
+>)
+, the configure script will stop and complain
+if it can't find one of the libraries.  Then you can go back to this
+step.</P
+><P
+>	  To install Mesa on your machine, go to the 
+<A
+HREF="http://www.mesa3d.org/"
+TARGET="_top"
+>          Mesa home page</A
+>
+          and download it.</P
+><P
+>	  You'll get a file something like 
+<TT
+CLASS="FILENAME"
+>MesaLib-3.1.tar.gz</TT
+> Unpack it:
+<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><SAMP
+CLASS="PROMPT"
+>%</SAMP
+> gunzip MesaLib-3.1.tar.gz
+<SAMP
+CLASS="PROMPT"
+>%</SAMP
+> tar -xf MesaLib-3.1.tar</PRE
+></TD
+></TR
+></TABLE
+>
+	  Then, cd to the MesaLib-3.1 directory and type:
+<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><SAMP
+CLASS="PROMPT"
+>%</SAMP
+> ./configure
+<SAMP
+CLASS="PROMPT"
+>%</SAMP
+> make</PRE
+></TD
+></TR
+></TABLE
+>
+	This should configure and compile Mesa.  Finally, switch to root
+	(superuser) and type:
+<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><SAMP
+CLASS="PROMPT"
+>%</SAMP
+> make install</PRE
+></TD
+></TR
+></TABLE
+>
+	  If you don't have access to the root account on your
+machine, and your system administrator is unwilling to install Mesa
+for you (unlikely, since Mesa is very standard and widely-used), you
+can instead install it to a location in your home directory, e.g.
+<TT
+CLASS="FILENAME"
+>~/Mesa</TT
+>.
+To do this, you would use the following steps instead of the above:
+<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><SAMP
+CLASS="PROMPT"
+>%</SAMP
+>./configure --prefix=$HOME/Mesa
+<SAMP
+CLASS="PROMPT"
+>%</SAMP
+> make
+<SAMP
+CLASS="PROMPT"
+>%</SAMP
+> make install</PRE
+></TD
+></TR
+></TABLE
+>
+	  The last step will copy the Mesa libraries and headers to
+<TT
+CLASS="FILENAME"
+>~/Mesa/lib</TT
+>, <TT
+CLASS="FILENAME"
+>~/Mesa/include</TT
+>, 
+etcetera.</P
+><P
+>	  When you run 'make install', it may print out some important
+directions regarding shared libraries.  If you install in a
+non-standard location, it will typically tell you add the 
+<TT
+CLASS="FILENAME"
+><CODE
+CLASS="OPTION"
+>prefix</CODE
+>/lib</TT
+> 
+directory to some environment variable.  On Linux systems, you
+may need to run <B
+CLASS="COMMAND"
+>/sbin/ldconfig</B
+>, etcetera.</P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="CH02SEC2.2"
+>NetCDF (optional)</A
+></H2
+><P
+>	  NetCDF is a free library for reading scientific data that
+can optionally be used by Vis5D.  If you do not have NetCDF, then
+certain features of Vis5D will be disabled, notably irregular dataset
+support.</P
+><P
+>	  To get NetCDF, go to the 
+<A
+HREF="http://www.unidata.ucar.edu/packages/netcdf/"
+TARGET="_top"
+>          NetCDF home page</A
+>
+	  and download the NetCDF package.  As of this writing, the
+current version is 
+<A
+HREF="ftp://ftp.unidata.ucar.edu/pub/netcdf/netcdf-3.4.tar.Z"
+TARGET="_top"
+>	3.4.</A
+></P
+><P
+>  Once you have downloaded it, unpack and compile the package with:
+<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><SAMP
+CLASS="PROMPT"
+>%</SAMP
+> uncompress netcdf-3.4.tar.Z
+<SAMP
+CLASS="PROMPT"
+>%</SAMP
+> tar xf netcdf-3.4.tar
+<SAMP
+CLASS="PROMPT"
+>%</SAMP
+> cd netcdf-3.4/src
+<SAMP
+CLASS="PROMPT"
+>%</SAMP
+> ./configure
+<SAMP
+CLASS="PROMPT"
+>%</SAMP
+> make</PRE
+></TD
+></TR
+></TABLE
+>
+	  On Linux systems, you may instead have to use:
+<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><SAMP
+CLASS="PROMPT"
+>%</SAMP
+> make CC="gcc -Df2cFortran"</PRE
+></TD
+></TR
+></TABLE
+>
+	  because NetCDF doesn't know how to deal with GNU g77.</P
+><P
+>Vis5D only needs the <TT
+CLASS="FILENAME"
+>libnetcdf.a</TT
+> file, located in
+<TT
+CLASS="FILENAME"
+>libsrc/libnetcdf.a</TT
+>. 
+If you have downloaded and unpacked Vis5D already,
+you can copy this file to the Vis5D directory now; otherwise, just
+leave it there and remember where it is.</P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="CH02SEC2.3"
+>Vis5d+</A
+></H2
+><P
+>Since you are reading this file, you have probably already
+downloaded and unpacked Vis5d+.  Otherwise, go to the 
+<A
+HREF="http://vis5d.sourceforge.net/"
+TARGET="_top"
+>Vis5d+ home page</A
+>
+and download the latest version.  It will be something like
+<TT
+CLASS="FILENAME"
+>vis5d+-1.0.1.tar.gz</TT
+>.  Unpack it with:
+<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><SAMP
+CLASS="PROMPT"
+>%</SAMP
+> gunzip vis5d+-1.0.1.tar.gz
+<SAMP
+CLASS="PROMPT"
+>%</SAMP
+> tar xf vis5d+-1.0.1.tar</PRE
+></TD
+></TR
+></TABLE
+>
+	  Now, cd to the Vis5D directory (cd vis5d+-1.0.1 if you were
+following the steps above).  At this point, you will run a "configure"
+script to automatically configure Vis5D for your machine. The most
+basic way to run <B
+CLASS="COMMAND"
+>configure</B
+> is by:
+<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><SAMP
+CLASS="PROMPT"
+>%</SAMP
+> ./configure</PRE
+></TD
+></TR
+></TABLE
+>
+	  but there are several optional arguments that you may want
+to pass it:</P
+><P
+></P
+><DIV
+CLASS="VARIABLELIST"
+><P
+><B
+>Optional Arguments</B
+></P
+><DL
+><DT
+><CODE
+CLASS="PARAMETER"
+>--prefix=<CODE
+CLASS="OPTION"
+>dir</CODE
+></CODE
+></DT
+><DD
+><P
+>	  By default, Vis5D will be set up to install (when you run
+'make install' below) under 
+<TT
+CLASS="FILENAME"
+>/usr/local</TT
+> on your system.  That is, the
+programs will be installed in <TT
+CLASS="FILENAME"
+>/usr/local/bin</TT
+>, 
+etcetera. This argument allows you to install to a different place.  
+For example, if you don't have root access you may want to install 
+to your home directory by using: </P
+><P
+><CODE
+CLASS="PARAMETER"
+>--prefix=<CODE
+CLASS="OPTION"
+>$HOME/Vis5D</CODE
+></CODE
+></P
+></DD
+><DT
+><CODE
+CLASS="PARAMETER"
+>--with-netcdf=<CODE
+CLASS="OPTION"
+>lib</CODE
+></CODE
+></DT
+><DD
+><P
+>	  This allows you to specify the location 
+(<TT
+CLASS="FILENAME"
+>lib</TT
+>) of the <TT
+CLASS="FILENAME"
+>libnetcdf.a</TT
+> file.
+You don't need to do this if you copied <TT
+CLASS="FILENAME"
+>libnetcdf.a</TT
+>
+to the Vis5D directory or if you installed it to a standard system
+location.  Contrariwise, 
+<CODE
+CLASS="PARAMETER"
+>--without-netcdf</CODE
+> forces Vis5D to 
+<SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>not</I
+></SPAN
+> use NetCDF even if it could find the library.</P
+></DD
+><DT
+><CODE
+CLASS="PARAMETER"
+>--enable-threads</CODE
+></DT
+><DD
+><P
+>	  Turn on multi-threading mode in Vis5d (if a threads library
+is found); should enhance responsiveness, even on single-CPU systems.</P
+></DD
+><DT
+><CODE
+CLASS="PARAMETER"
+>--with-memory=<CODE
+CLASS="OPTION"
+>MB</CODE
+></CODE
+></DT
+><DD
+><P
+>Set the maximum amount of memory to use <CODE
+CLASS="OPTION"
+> MB </CODE
+> megabytes
+(defaults to 32).  Vis5d normally uses a bounded amount of memory to
+avoid swapping.  When the limit is reached, the least-recently viewed
+graphics will be deallocated.  If <CODE
+CLASS="OPTION"
+> MB </CODE
+> 
+is set to 0, there will be no memory limit and Vis5d will never 
+deallocate graphics.</P
+></DD
+><DT
+><CODE
+CLASS="PARAMETER"
+>--with-mesa</CODE
+></DT
+><DD
+><P
+>Force the use of Mesa even if a "real" OpenGL library is
+available. This just means it looks for 
+<TT
+CLASS="FILENAME"
+>libMesaGL</TT
+> libraries, etcetera,
+before <TT
+CLASS="FILENAME"
+>libGL</TT
+> instead of afterwards.  
+This option isn't useful with recent versions of Mesa, which install as 
+<TT
+CLASS="FILENAME"
+>libGL</TT
+>, etcetera.</P
+></DD
+><DT
+><CODE
+CLASS="PARAMETER"
+>--with-mcidas=<CODE
+CLASS="OPTION"
+>lib</CODE
+></CODE
+></DT
+><DD
+><P
+>	  Specify the location of a McIDAS library file, an optional
+(proprietary) library that Vis5D can use.  (Vis5D comes with an older
+McIDAS library binary for IRIX, which will be used if it works with
+your system.)</P
+></DD
+><DT
+><CODE
+CLASS="PARAMETER"
+>--disable-fortran</CODE
+></DT
+><DD
+><P
+>	  Don't compile any of the Fortran utility programs, etcetera,
+even if there is a Fortran compiler on your system (it will normally
+be used automatically).  You can use this if your Fortran compiler
+gives you troubles when compiling Vis5D.</P
+></DD
+><DT
+><CODE
+CLASS="PARAMETER"
+>--disable-shared</CODE
+></DT
+><DD
+><P
+></P
+></DD
+><DT
+><CODE
+CLASS="PARAMETER"
+>--disable-static</CODE
+></DT
+><DD
+><P
+>	  Disable creation of the shared (<TT
+CLASS="FILENAME"
+>.so</TT
+>) and static (<TT
+CLASS="FILENAME"
+>.a</TT
+>)
+libaries, respectively.  Don't disable both, as the Vis5D program
+requires a library to link to!</P
+></DD
+></DL
+></DIV
+><P
+>You can also set one or more environment variables before
+running <B
+CLASS="COMMAND"
+>configure</B
+>, to help it find libraries and otherwise control its
+behavior.  (You can go back and do this if configure has trouble.) You
+set an environment variable by the syntax <SAMP
+CLASS="COMPUTEROUTPUT"
+>setenv variable value</SAMP
+> (or
+<SAMP
+CLASS="COMPUTEROUTPUT"
+>export variable=value</SAMP
+> if you are using <B
+CLASS="COMMAND"
+>ksh</B
+>, <B
+CLASS="COMMAND"
+>bash</B
+>, or the like). Most
+of the time, you won't need to do this, but if you do, some possible
+environment variables are:</P
+><P
+><P
+></P
+><UL
+><LI
+><P
+><CODE
+CLASS="SYMBOL"
+>CC:</CODE
+> the name of the C compiler</P
+></LI
+><LI
+><P
+><CODE
+CLASS="SYMBOL"
+>CPPFLAGS:</CODE
+> 
+ <CODE
+CLASS="PARAMETER"
+>-I <CODE
+CLASS="OPTION"
+>dir</CODE
+></CODE
+> flags to tell the C
+ compiler where to look for header files</P
+></LI
+><LI
+><P
+><CODE
+CLASS="SYMBOL"
+>CFLAGS:</CODE
+> C compiler flags</P
+></LI
+><LI
+><P
+><CODE
+CLASS="SYMBOL"
+>F77:</CODE
+> the name of the Fortran compiler</P
+></LI
+><LI
+><P
+><CODE
+CLASS="SYMBOL"
+>FFLAGS:</CODE
+> Fortran compiler flags</P
+></LI
+><LI
+><P
+><CODE
+CLASS="SYMBOL"
+>LDFLAGS:</CODE
+> linker flags 
+(e.g. <CODE
+CLASS="PARAMETER"
+>-L <CODE
+CLASS="OPTION"
+>dir</CODE
+></CODE
+> to look
+		for libraries in <TT
+CLASS="FILENAME"
+>dir</TT
+>)</P
+></LI
+></UL
+></P
+><P
+>	  The most common use for these variables is when you have
+libraries installed in nonstandard locations, in which case you will
+use the <CODE
+CLASS="SYMBOL"
+>CPPFLAGS</CODE
+> and <CODE
+CLASS="SYMBOL"
+>LDFLAGS</CODE
+> environment variables.  For example,
+consider the case above where you installed the Mesa library in
+<TT
+CLASS="FILENAME"
+>~/Mesa</TT
+>.  
+You would then tell <B
+CLASS="COMMAND"
+>configure</B
+> where to find the Mesa
+libraries and header files with:
+<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><SAMP
+CLASS="PROMPT"
+>%</SAMP
+> setenv CPPFLAGS "-I$HOME/Mesa/include"
+<SAMP
+CLASS="PROMPT"
+>%</SAMP
+> setenv LDFLAGS "-L$HOME/Mesa/lib"</PRE
+></TD
+></TR
+></TABLE
+>
+	  Be sure to scan the <B
+CLASS="COMMAND"
+>configure</B
+> output for important warning
+messages, which will be surrounded by asterisks (<SAMP
+CLASS="COMPUTEROUTPUT"
+>*******</SAMP
+>).  Once you
+have run <B
+CLASS="COMMAND"
+>configure</B
+> successfully, you can compile Vis5D by typing:
+<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><SAMP
+CLASS="PROMPT"
+>%</SAMP
+> make</PRE
+></TD
+></TR
+></TABLE
+>
+	  If you want, you can run the program right away by typing:
+<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><SAMP
+CLASS="PROMPT"
+>%</SAMP
+> src/vis5d hole.v5d -path src</PRE
+></TD
+></TR
+></TABLE
+>
+<TT
+CLASS="FILENAME"
+>hole.v5d</TT
+> is a sample data file included with Vis5D.
+The <CODE
+CLASS="PARAMETER"
+>-path</CODE
+><CODE
+CLASS="OPTION"
+> src </CODE
+>
+argument is necessary to tell it where the map data files
+are located; it will no longer be need after you do a 'make install'
+(see below).  Click and drag in the display window to rotate it, and
+click on buttons in the lower portion of the control window to plot
+the data.</P
+><P
+>	  If this completes succesfully, you will then want to install
+Vis5D:
+<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><SAMP
+CLASS="PROMPT"
+>%</SAMP
+> make install</PRE
+></TD
+></TR
+></TABLE
+>
+	  (You may need to switch to root first, or do <SAMP
+CLASS="COMPUTEROUTPUT"
+>su -c "make
+install"</SAMP
+>, if you are installing in system locations.)</P
+><P
+>	  Note that the <SAMP
+CLASS="COMPUTEROUTPUT"
+>make install</SAMP
+> output may contain important
+instructions regarding shared libraries (if you want to link to the
+Vis5D libraries in your programs).  e.g. on Linux you'll need to run
+<B
+CLASS="COMMAND"
+>/etc/ldconfig</B
+> and possibly edit <TT
+CLASS="FILENAME"
+>/etc/ld.so.conf</TT
+>.</P
+><P
+>	  Once this is done, the <B
+CLASS="COMMAND"
+>vis5d</B
+> program, utilities, data, and
+libraries are installed under <TT
+CLASS="FILENAME"
+>/usr/local</TT
+>, or wherever you specified
+with the <CODE
+CLASS="PARAMETER"
+>--prefix</CODE
+> argument to <B
+CLASS="COMMAND"
+>configure</B
+> (as described
+above).  You should now be able to run it by simply typing <B
+CLASS="COMMAND"
+>vis5d</B
+> (if
+you installed in a system directory) or by typing 
+<CODE
+CLASS="OPTION"
+>prefix</CODE
+><TT
+CLASS="FILENAME"
+>/bin/vis5d</TT
+>
+(otherwise, where <CODE
+CLASS="OPTION"
+>prefix</CODE
+> was the argument to
+<CODE
+CLASS="PARAMETER"
+>--prefix</CODE
+>), in either case followed by the name of a
+data file.</P
+><P
+>	  One sample data file, 
+<TT
+CLASS="FILENAME"
+>hole.v5d</TT
+>, is included with Vis5D, and
+more may be downloaded from the 
+<A
+HREF="ftp://www.ssec.wisc.edu/pub/"
+TARGET="_top"
+>Vis5D ftp site</A
+>.</P
+><P
+>	  If you want to uninstall Vis5d at any time, you can do:
+<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><SAMP
+CLASS="PROMPT"
+>%</SAMP
+> make uninstall</PRE
+></TD
+></TR
+></TABLE
+>
+	  which removes the files installed by <SAMP
+CLASS="COMPUTEROUTPUT"
+>make install</SAMP
+>.</P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="CH02SEC2.4"
+>Manifest</A
+></H2
+><P
+>The files installed by Vis5D include:</P
+><P
+><DIV
+CLASS="TABLE"
+><A
+NAME="AEN288"
+></A
+><P
+><B
+>Table 2-1. Programs (in <TT
+CLASS="FILENAME"
+><CODE
+CLASS="OPTION"
+>prefix</CODE
+>/bin</TT
+>):</B
+></P
+><TABLE
+BORDER="1"
+CLASS="CALSTABLE"
+><COL><COL><TBODY
+><TR
+><TD
+>vis5d</TD
+><TD
+>this is the vis5d visualization program</TD
+></TR
+><TR
+><TD
+>v5dappend</TD
+><TD
+>utility to join v5d files
+		  together</TD
+></TR
+><TR
+><TD
+>v5dinfo</TD
+><TD
+>utility to see summary of a v5d
+	      file</TD
+></TR
+><TR
+><TD
+>v5dstats</TD
+><TD
+>utility to see statistics of a v5d
+	      file</TD
+></TR
+><TR
+><TD
+>v5dedit</TD
+><TD
+>utility to edit the header of a v5d
+	      file</TD
+></TR
+><TR
+><TD
+>v5dimport</TD
+><TD
+>utility to convert, resample, and
+	      reduce v5d files</TD
+></TR
+><TR
+><TD
+>comp_to_v5d </TD
+><TD
+>utility to convert (a) comp5d
+	      file(s) to v5d format</TD
+></TR
+><TR
+><TD
+>listfonts</TD
+><TD
+>utility to list fonts (only on SGI
+	      systems for IRIS GL)</TD
+></TR
+><TR
+><TD
+>topoinfo</TD
+><TD
+>utility to see info about a .topo
+	      file</TD
+></TR
+><TR
+><TD
+>fromxwd</TD
+><TD
+>utility to convert .xwd files to SGI
+	      .rgb format</TD
+></TR
+><TR
+><TD
+>gr3d_to_v5d</TD
+><TD
+>utility to convert a McIDAS GR3D
+	      file to v5d format</TD
+></TR
+><TR
+><TD
+>gg3d</TD
+><TD
+>McIDAS grid utility</TD
+></TR
+><TR
+><TD
+>igg3d</TD
+><TD
+>McIDAS grid utility</TD
+></TR
+><TR
+><TD
+>igu3d</TD
+><TD
+>McIDAS grid utility</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+></P
+><P
+><DIV
+CLASS="TABLE"
+><A
+NAME="AEN337"
+></A
+><P
+><B
+>Table 2-2. Libraries (in <TT
+CLASS="FILENAME"
+><CODE
+CLASS="OPTION"
+>prefix</CODE
+>/lib</TT
+>):</B
+></P
+><TABLE
+BORDER="1"
+CLASS="CALSTABLE"
+><COL><COL><TBODY
+><TR
+><TD
+><TT
+CLASS="FILENAME"
+>libv5d</TT
+></TD
+><TD
+>.v5d file I/O API</TD
+></TR
+><TR
+><TD
+><TT
+CLASS="FILENAME"
+>libvis5d</TT
+></TD
+><TD
+>the rest of the Vis5D API</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+></P
+><P
+>(Programs using the full Vis5D API should link with 
+<CODE
+CLASS="PARAMETER"
+>-lvis5d -lv5d</CODE
+>, 
+while programs just doing file I/O can link with just 
+<CODE
+CLASS="PARAMETER"
+>-lv5d</CODE
+>.)</P
+><P
+><DIV
+CLASS="TABLE"
+><A
+NAME="AEN355"
+></A
+><P
+><B
+>Table 2-3. Headers (in <TT
+CLASS="FILENAME"
+><CODE
+CLASS="OPTION"
+>prefix</CODE
+>/include/vis5d</TT
+>):</B
+></P
+><TABLE
+BORDER="1"
+CLASS="CALSTABLE"
+><COL><COL><TBODY
+><TR
+><TD
+><TT
+CLASS="FILENAME"
+>v5d.h,binio.h</TT
+> </TD
+><TD
+>the file I/O API definitions</TD
+></TR
+><TR
+><TD
+><TT
+CLASS="FILENAME"
+>v5df.h</TT
+></TD
+><TD
+>file I/O API for Fortran</TD
+></TR
+><TR
+><TD
+><TT
+CLASS="FILENAME"
+>api.h</TT
+></TD
+><TD
+>rest of the Vis5D API</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+></P
+><P
+><DIV
+CLASS="TABLE"
+><A
+NAME="AEN374"
+></A
+><P
+><B
+>Table 2-4. Data (in <TT
+CLASS="FILENAME"
+><CODE
+CLASS="OPTION"
+>prefix</CODE
+>/share/vis5d+</TT
+>):</B
+></P
+><TABLE
+BORDER="1"
+CLASS="CALSTABLE"
+><COL><COL><TBODY
+><TR
+><TD
+><TT
+CLASS="FILENAME"
+>OUTLSUPW</TT
+></TD
+><TD
+>World continental map lines file</TD
+></TR
+><TR
+><TD
+><TT
+CLASS="FILENAME"
+>OUTLUSAM</TT
+></TD
+><TD
+>Medium resolution map of US with state boundaries</TD
+></TR
+><TR
+><TD
+><TT
+CLASS="FILENAME"
+>EARTH.TOPO</TT
+></TD
+><TD
+>Earth topography file</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+></P
+><P
+><DIV
+CLASS="TABLE"
+><A
+NAME="AEN393"
+></A
+><P
+><B
+>Table 2-5. Uninstalled files and subdirectories:</B
+></P
+><TABLE
+BORDER="1"
+CLASS="CALSTABLE"
+><COL><COL><TBODY
+><TR
+><TD
+><TT
+CLASS="FILENAME"
+>README</TT
+></TD
+><TD
+>short description of the program</TD
+></TR
+><TR
+><TD
+><TT
+CLASS="FILENAME"
+>COPYING</TT
+></TD
+><TD
+>the GNU general public license</TD
+></TR
+><TR
+><TD
+><TT
+CLASS="FILENAME"
+>COPYRIGHT</TT
+></TD
+><TD
+>copyright notice</TD
+></TR
+><TR
+><TD
+><TT
+CLASS="FILENAME"
+>PORTING</TT
+></TD
+><TD
+>an ASCII document with notes on porting Vis5D</TD
+></TR
+><TR
+><TD
+><TT
+CLASS="FILENAME"
+>hole.v5d</TT
+></TD
+><TD
+>sample dataset (dielectric function
+            and z-comp. of a magnetic field guided in a 
+            dielectric slab with holes)</TD
+></TR
+><TR
+><TD
+>doc/</TD
+><TD
+>this manual, in PDF and HTML formats</TD
+></TR
+><TR
+><TD
+>scripts/</TD
+><TD
+>example scripts</TD
+></TR
+><TR
+><TD
+>src/</TD
+><TD
+>source code for <B
+CLASS="COMMAND"
+>vis5d</B
+> and <B
+CLASS="COMMAND"
+>v5dimport</B
+></TD
+></TR
+><TR
+><TD
+>util/</TD
+><TD
+>source code for the Vis5D utilities</TD
+></TR
+><TR
+><TD
+>lui5/</TD
+><TD
+>source code for LUI user interface library</TD
+></TR
+><TR
+><TD
+>userfuncs/</TD
+><TD
+>directory of user-written analysis functions</TD
+></TR
+><TR
+><TD
+>contrib/</TD
+><TD
+>software contributed by Vis5D users</TD
+></TR
+><TR
+><TD
+>convert/</TD
+><TD
+>source code for sample data	conversion programs</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+></P
+><P
+>You can also download from the  
+<A
+HREF="http://www.ssec.wisc.edu/~billh/vis5d.html"
+TARGET="_top"
+> 
+Vis5D web site  </A
+>
+<A
+HREF="ftp://www.ssec.wisc.edu/pub/vis5d-5.2/vis5d-userdata.tar.Z"
+TARGET="_top"
+> 
+sample code  </A
+> for user supplied data formats, including:</P
+><P
+>         <TT
+CLASS="FILENAME"
+>LAMPS.v5d</TT
+>: Sample LAMPS data set</P
+><P
+>         <TT
+CLASS="FILENAME"
+>SCHL.v5d</TT
+>: Sample data set; 
+         Bob Schlesinger's thunderstorm model</P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="CH02SEC2.5"
+>Customizing</A
+></H2
+><P
+>	  After installation and testing you may want to customize the
+	  vis5d program by editing the <TT
+CLASS="FILENAME"
+>src/vis5d.h</TT
+>
+          file:</P
+><P
+><P
+></P
+><OL
+TYPE="1"
+><LI
+><P
+>		The visualization program vis5d assumes your system
+has 32 megabytes of memory.  Although you can override this when you
+invoke vis5d, it may be convenient to change the default if your
+system has more than 32MB. This value is now controlled by the
+<CODE
+CLASS="PARAMETER"
+>--with-memory=<CODE
+CLASS="OPTION"
+>MB</CODE
+></CODE
+> 
+option to the <B
+CLASS="COMMAND"
+>configure</B
+> script (see above).</P
+></LI
+><LI
+><P
+>		There are two ways to specify a different topography
+and/or map file. One way is to edit <TT
+CLASS="FILENAME"
+>src/vis5d.h</TT
+>
+and change the values for TOPOFILE and/or MAPFILE.  
+For example, if you move the map and
+topography files to /usr/local/data, you would specify
+<TT
+CLASS="FILENAME"
+>/usr/local/data/EARTH.TOPO</TT
+> and 
+<TT
+CLASS="FILENAME"
+>/usr/local/data/OUTLUSAM</TT
+>
+respectively. The other way is press the
+'DISPLAY' button on the main contral panel,
+then press the  'Options' button found above each display menu.  
+The 'toponame' and/or 'mapname' fields can be changed accordingly.</P
+><P
+> By default, these files are looked for in
+<TT
+CLASS="FILENAME"
+>/usr/local/share/vis5d+</TT
+>, or whereever 
+Vis5D was installed.  You can change this by either the 
+<CODE
+CLASS="OPTION"
+>-path</CODE
+> argument to Vis5D or the VIS5D_PATH environment 
+variable.</P
+></LI
+></OL
+></P
+><P
+>When you are finished changing the <TT
+CLASS="FILENAME"
+>src/vis5d.h</TT
+>
+file, you must recompile. the programs.</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="ch02.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="ch03.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>System Requirements and Installation</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="ch02.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Putting Your Data Into Vis5D</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

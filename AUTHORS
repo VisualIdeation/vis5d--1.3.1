@@ -1,0 +1,26 @@
+Authors of Vis5d:
+
+Bill Hibbard <hibbard@facstaff.wisc.edu>
+Johan Kellum <johan@ssec.wisc.edu>
+Brian Paul
+
+Contributors:
+
+Andre Battaiola of CPTEC, Sao Paulo, Brazil
+Dave Santek of SSEC
+Marie-Francoise Voidrot-Martinez of the French Meteorology Office
+Dave Kamins and Jeff Vroom of Stellar Computer, Inc.
+Simon Baas and Hans de Jong of the Netherlands for the HP/VOGL port
+Pratish Shah of Kubota Computer for the Kubota port
+Mike Stroyan of HP for the PEX support
+
+Vis5d+:
+
+Steven G. Johnson <stevenj@alum.mit.edu> of MIT.
+Jim Edwards of INMET (Instituto Nacional de Meteorologia Brasil).
+Axel Reimann of Humboldt Univ. (converted the manual to DocBook).
+Conrad Poelman of Stellar Science Ltd. Co. (improved v5dimport, etc.).
+
+with additional thanks to:
+
+Jaakko Hyvätti of Foreca Ltd. (date-handling patches).

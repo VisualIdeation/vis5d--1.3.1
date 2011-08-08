@@ -1,0 +1,2673 @@
+2002-04-10  gettextize  <bug-gnu-gettext@gnu.org>
+
+
+2002-04-10  gettextize  <bug-gnu-gettext@gnu.org>
+
+
+2002-04-10  gettextize  <bug-gnu-gettext@gnu.org>
+
+
+2002-04-10  gettextize  <bug-gnu-gettext@gnu.org>
+
+
+2002-04-10  gettextize  <bug-gnu-gettext@gnu.org>
+
+
+2002-04-10  gettextize  <bug-gnu-gettext@gnu.org>
+
+
+2002-04-10  gettextize  <bug-gnu-gettext@gnu.org>
+
+
+2002-04-10  gettextize  <bug-gnu-gettext@gnu.org>
+
+
+2002-04-10  gettextize  <bug-gnu-gettext@gnu.org>
+
+
+2002-04-10  gettextize  <bug-gnu-gettext@gnu.org>
+
+
+2002-04-10  gettextize  <bug-gnu-gettext@gnu.org>
+
+
+2002-04-10  gettextize  <bug-gnu-gettext@gnu.org>
+
+	* configure.in (AC_CONFIG_FILES): Add po/Makefile.in.
+
+2002-03-20  gettextize  <bug-gnu-gettext@gnu.org>
+
+
+2002-03-20  gettextize  <bug-gnu-gettext@gnu.org>
+
+	* Makefile.am (SUBDIRS): Add m4.
+	(SUBDIRS): Remove intl.
+	(ACLOCAL_AMFLAGS): New variable.
+	(EXTRA_DIST): Add config.rpath.
+	* configure.in (AC_CONFIG_FILES): Add m4/Makefile.
+	(AC_CONFIG_FILES): Remove intl/Makefile.
+
+2001-10-11  stevengj  <stevengj@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/ChangeLog,
+	/cvsroot/vis5d/vis5d/configure.in: some minor cleanups
+
+2001-10-11  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/configure.in: fixed MIXKIT test in
+	configure.in
+
+	* /cvsroot/vis5d/vis5d/configure.in,
+	/cvsroot/vis5d/vis5d/src/Makefile.am,
+	/cvsroot/vis5d/vis5d/src/api.c,
+	/cvsroot/vis5d/vis5d/src/globals.h,
+	/cvsroot/vis5d/vis5d/src/gui.c, /cvsroot/vis5d/vis5d/src/misc.c,
+	/cvsroot/vis5d/vis5d/src/queue.c,
+	/cvsroot/vis5d/vis5d/src/render.c,
+	/cvsroot/vis5d/vis5d/src/save.c, /cvsroot/vis5d/vis5d/src/work.c:
+	removed the USE_GLLISTS code which had several problems including
+	disabling vrml output and making it hard to update color and other
+	image attributes.
+
+2001-10-10  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/configure.in,
+	/cvsroot/vis5d/vis5d/src/main.c: configure.in changed to not
+	support NLS without libintl.h include paths in gtk and
+	gtk/gradients changed
+
+	* /cvsroot/vis5d/vis5d/Makefile.am,
+	/cvsroot/vis5d/vis5d/configure.in,
+	/cvsroot/vis5d/vis5d/src/Makefile.am,
+	/cvsroot/vis5d/vis5d/src/graphics.vrml.c,
+	/cvsroot/vis5d/vis5d/src/memory.c,
+	/cvsroot/vis5d/vis5d/src/sounding.c: port to sgi indicated an
+	error in sounding.c debug macro should not be defined in memory.c
+	corrected gnu_gettext macro in configure.in corrected subdirectory
+	structure in Makefile.am ...
+
+	this commit should be release ready...
+
+2001-10-09  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/libmcidas5.a,
+	/cvsroot/vis5d/vis5d/src/main.c,
+	/cvsroot/vis5d/vis5d/src/memory.c,
+	/cvsroot/vis5d/vis5d/src/misc.c,
+	/cvsroot/vis5d/vis5d/src/netcdf.h,
+	/cvsroot/vis5d/vis5d/src/render.c,
+	/cvsroot/vis5d/vis5d/src/render.h,
+	/cvsroot/vis5d/vis5d/src/script.c,
+	/cvsroot/vis5d/vis5d/src/sgidump.c,
+	/cvsroot/vis5d/vis5d/src/sgidump.h,
+	/cvsroot/vis5d/vis5d/src/vis5d.h,
+	/cvsroot/vis5d/vis5d/src/volume.c,
+	/cvsroot/vis5d/vis5d/src/work.c, /cvsroot/vis5d/vis5d/autogen.sh,
+	/cvsroot/vis5d/vis5d/configure.in,
+	/cvsroot/vis5d/vis5d/lui5/browser2.c,
+	/cvsroot/vis5d/vis5d/lui5/colorbar.c,
+	/cvsroot/vis5d/vis5d/lui5/colorbar.h,
+	/cvsroot/vis5d/vis5d/src/Makefile.am,
+	/cvsroot/vis5d/vis5d/src/api.c, /cvsroot/vis5d/vis5d/src/api.h,
+	/cvsroot/vis5d/vis5d/src/decimate.C,
+	/cvsroot/vis5d/vis5d/src/decimate.h,
+	/cvsroot/vis5d/vis5d/src/displaywidget.c,
+	/cvsroot/vis5d/vis5d/src/globals.h,
+	/cvsroot/vis5d/vis5d/src/graphics.all.c,
+	/cvsroot/vis5d/vis5d/src/graphics.h,
+	/cvsroot/vis5d/vis5d/src/graphics.ogl.c,
+	/cvsroot/vis5d/vis5d/src/graphics.scenes.c,
+	/cvsroot/vis5d/vis5d/src/graphics.scenes.h,
+	/cvsroot/vis5d/vis5d/src/graphics.vrml.c,
+	/cvsroot/vis5d/vis5d/src/graphics.vrml.h,
+	/cvsroot/vis5d/vis5d/src/gui.c, /cvsroot/vis5d/vis5d/src/gui.h:
+	This is a merge of the contributions provided by NCAR.  It
+	includes support for stereo display, vrml output, and desimated
+	isosurface calculation.
+
+	Copyrights on some source files were changed in accordance with
+	the following correspondence from Don Middleton of NCAR:
+
+	> First, regarding the UCAR Copyright notices in Vis5D, mea culpa
+	- they > should not be there. As I understand it, any enhanced or
+	extended version of > Vis5D that we or anyone else create is bound
+	by the GPL. The Copyright > notice is a by-product of a script we
+	use for local software development > called "comment" and it jams
+	in the notice. My fault. Please consider this > explicit
+	permission from UCAR to strip those notices out.
+
+2001-09-26  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/configure.in: work on portuguese
+	translations and configure for gettext
+
+	* /cvsroot/vis5d/vis5d/configure.in: General update of gtk
+	development.  Also fixed problem with the po directory and added
+	file pt_BR.po for translation to portuguese.
+
+2001-09-25  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/api.c, /cvsroot/vis5d/vis5d/src/api.h,
+	/cvsroot/vis5d/vis5d/src/globals.h,
+	/cvsroot/vis5d/vis5d/src/graphics.all.c,
+	/cvsroot/vis5d/vis5d/src/grid.c,
+	/cvsroot/vis5d/vis5d/src/memory.c,
+	/cvsroot/vis5d/vis5d/src/memory.h,
+	/cvsroot/vis5d/vis5d/src/misc.c, /cvsroot/vis5d/vis5d/src/topo.c,
+	/cvsroot/vis5d/vis5d/src/work.c: An attempt to clean up memory
+	allocation and freeing.
+
+
+	Also a new api function was added - vis5d_matrix_mult( index,
+	float matrix[4][4]) multiples the model matrix associated with the
+	display by matrix.
+
+2001-09-05  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/graphics.ogl.c,
+	/cvsroot/vis5d/vis5d/src/render.c,
+	/cvsroot/vis5d/vis5d/src/work.c: yet another bug fixed.  This one
+	occured only when using USE_SYSTEM_FONTS but not USE_GLLISTS.
+
+	* /cvsroot/vis5d/vis5d/src/misc.c: intialized linewidth for
+	isoline requests
+
+	* /cvsroot/vis5d/vis5d/src/api.c,
+	/cvsroot/vis5d/vis5d/src/graphics.ogl.c,
+	/cvsroot/vis5d/vis5d/src/misc.c, /cvsroot/vis5d/vis5d/src/queue.c,
+	/cvsroot/vis5d/vis5d/src/render.c,
+	/cvsroot/vis5d/vis5d/src/work.c: fixed a minor bug in selecting
+	min and max contour values for shaded contours fixed an error in
+	compiling when USE_GLLISTS is not defined.
+
+2001-09-03  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/api.c, /cvsroot/vis5d/vis5d/src/api.h,
+	/cvsroot/vis5d/vis5d/src/globals.h,
+	/cvsroot/vis5d/vis5d/src/render.c: added support for linewidth of
+	HSLICE and VSLICE lines.
+
+	fixed a problem introduced in the last commit which prevented the
+	graphics box (VIS5D_BOX) from being drawn under certain
+	conditions.
+
+	* /cvsroot/vis5d/vis5d/src/api.c, /cvsroot/vis5d/vis5d/src/api.h,
+	 /cvsroot/vis5d/vis5d/src/globals.h,
+	 /cvsroot/vis5d/vis5d/src/graphics.ogl.c,
+	 /cvsroot/vis5d/vis5d/src/gui.c, /cvsroot/vis5d/vis5d/src/misc.c,
+	 /cvsroot/vis5d/vis5d/src/queue.c,
+	 /cvsroot/vis5d/vis5d/src/render.c,
+	 /cvsroot/vis5d/vis5d/src/work.c: changed shaded contours to plot
+	 extreme values for data outside of range rather than missing.
+	 Added support for selecting either colored vertex or texture
+	 shaded style of shaded contours.  Texture shaded contours update
+	 continuously when changing the colortable while the colored
+	 vertex method must recompute the contours.  However the graphics
+	 produced are different, and may not be to the liking of some
+	 users.  This will be presented as an option in gtk. lui5 will use
+	 the colored vertex (original method)
+
+	 Added support for changeing the linestyle of isoline plots,
+	 however this needs more work, I think that the way contours are
+	 currently drawn (as disjoint lines rather than line strips)
+	 precludes this being a usable option.
+
+	 Changed gui.c so that volumes are not recomputed while any mouse
+	 button is pressed in the graphics window, they are only
+	 recomputed when the mouse is released.  Currently the volume is
+	 not drawn, we can also consider redrawing the most recently
+	 rendered volume while doing mouse operations.
+
+2001-08-29  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/api.c, /cvsroot/vis5d/vis5d/src/api.h,
+	/cvsroot/vis5d/vis5d/src/globals.h,
+	/cvsroot/vis5d/vis5d/src/graphics.h,
+	/cvsroot/vis5d/vis5d/src/graphics.ogl.c,
+	/cvsroot/vis5d/vis5d/src/misc.c, /cvsroot/vis5d/vis5d/src/queue.c,
+	/cvsroot/vis5d/vis5d/src/render.c,
+	/cvsroot/vis5d/vis5d/src/work.c: added support for selecting
+	either color texture or color technique of shaded contours and
+	support for selecting fill style in either mode.
+
+	An api function was added to support selecting fill style
+	vis5d_var_graphics_option
+
+2001-08-28  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/graphics.h,
+	/cvsroot/vis5d/vis5d/src/graphics.ogl.c,
+	/cvsroot/vis5d/vis5d/src/render.c,
+	/cvsroot/vis5d/vis5d/src/work.c: rather than copying code to
+	generate_ functions, I've modified the draw_ functions to handle
+	gllists.  I've also cleaned up the draw_color_quadmesh routine and
+	added an option to draw as a texture_method.
+
+	* /cvsroot/vis5d/vis5d/src/graphics.ogl.c,
+	/cvsroot/vis5d/vis5d/src/render.c: improved rendering of colored
+	contours in GL_LISTS
+
+2001-08-27  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/globals.h,
+	/cvsroot/vis5d/vis5d/src/graphics.h,
+	/cvsroot/vis5d/vis5d/src/graphics.ogl.c,
+	/cvsroot/vis5d/vis5d/src/gui.c, /cvsroot/vis5d/vis5d/src/misc.c,
+	/cvsroot/vis5d/vis5d/src/render.c,
+	/cvsroot/vis5d/vis5d/src/save.c,
+	/cvsroot/vis5d/vis5d/src/volume.c,
+	/cvsroot/vis5d/vis5d/src/work.c: fixes a bug introduced in the
+	last commit for isosurfaces and adds chslice and cvslice to the
+	graphics which can use glLists.  Problem: changing the color table
+	in a colored slice is no longer a trivial operation and requires
+	recomputing the whole thing...
+
+	I also changed the color table algorythm so that out of bounds
+	values are rendered as the boundary color 0 or 254 rather than 255
+	(the missing value).
+
+	* /cvsroot/vis5d/vis5d/src/api.c,
+	/cvsroot/vis5d/vis5d/src/contour.c,
+	/cvsroot/vis5d/vis5d/src/globals.h,
+	/cvsroot/vis5d/vis5d/src/graphics.h,
+	/cvsroot/vis5d/vis5d/src/graphics.ogl.c,
+	/cvsroot/vis5d/vis5d/src/misc.c, /cvsroot/vis5d/vis5d/src/queue.c,
+	/cvsroot/vis5d/vis5d/src/render.c,
+	/cvsroot/vis5d/vis5d/src/save.c,
+	/cvsroot/vis5d/vis5d/src/volume.c,
+	/cvsroot/vis5d/vis5d/src/work.c: added USE_GLLISTS support for
+	vslice and isosurfaces.  See the notes from the previous commit
+	for a complete description.
+
+2001-08-26  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/globals.h,
+	/cvsroot/vis5d/vis5d/src/graphics.h,
+	/cvsroot/vis5d/vis5d/src/graphics.ogl.c,
+	/cvsroot/vis5d/vis5d/src/misc.c,
+	/cvsroot/vis5d/vis5d/src/render.c,
+	/cvsroot/vis5d/vis5d/src/save.c, /cvsroot/vis5d/vis5d/src/work.c:
+	experimental addition in macro flag USE_GLLISTS:
+
+	horizontal contours are stored in glLists rather than as lists of
+	vectors.  This turns over memory management for these objects to
+	the ogl library, and frees vis5d memory for other uses.  Compiling
+	with this flag will break save and restore functions for hslice.
+	This flag should be considered experimental at this time.
+
+	Jim
+
+2001-08-23  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/autogen.sh: fixes a bug introduced in last
+	commit of autogen.sh
+
+	* /cvsroot/vis5d/vis5d/autogen.sh,
+	/cvsroot/vis5d/vis5d/configure.in,
+	/cvsroot/vis5d/vis5d/vis5d+.glade: vis5d+.glade moved to gtk
+	directory and autogen.sh modified appropriatly.  configure.in
+	reflects new dir structure under gtk
+
+2001-08-22  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/api.c, /cvsroot/vis5d/vis5d/src/api.h,
+	/cvsroot/vis5d/vis5d/src/graphics.h,
+	/cvsroot/vis5d/vis5d/src/map.c,
+	/cvsroot/vis5d/vis5d/src/rgbsliders.c,
+	/cvsroot/vis5d/vis5d/src/work.c, /cvsroot/vis5d/vis5d/src/work.h:
+	fixed a minor problem in the way include files were listed in
+	graphics.h
+
+	Added 2 new api functions and the underlying code to support them:
+
+	vis5d_set_chslice_limits(int index, int var, float low, float
+	high, float level) int vis5d_get_chslice_limits( int index, int
+	var, float *low, float *high, float *level )
+
+	Sets or retreves the chslice including the upper and lower limits
+	of the colortable.  Data values outside this range are ploted as
+	missing - transparent black.  setting low>= high results in a set
+	of reasonable limits being chosen for you.
+
+2001-08-20  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/api.c,
+	/cvsroot/vis5d/vis5d/src/record.c: corrected initialization of
+	vis5d_irregular_variable structure introduced in previous commit
+
+2001-08-19  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/api.c: corrects error introduced in
+	last commit.  malloc for isosurface should not be done here.
+	removed
+
+	* /cvsroot/vis5d/vis5d/src/analysis.c,
+	/cvsroot/vis5d/vis5d/src/api.c,
+	/cvsroot/vis5d/vis5d/src/compute.c,
+	/cvsroot/vis5d/vis5d/src/contour.c,
+	/cvsroot/vis5d/vis5d/src/globals.h,
+	/cvsroot/vis5d/vis5d/src/grid.c, /cvsroot/vis5d/vis5d/src/misc.c,
+	/cvsroot/vis5d/vis5d/src/queue.c,
+	/cvsroot/vis5d/vis5d/src/record.c,
+	/cvsroot/vis5d/vis5d/src/render.c,
+	/cvsroot/vis5d/vis5d/src/save.c,
+	/cvsroot/vis5d/vis5d/src/sounding.c,
+	/cvsroot/vis5d/vis5d/src/textplot.c,
+	/cvsroot/vis5d/vis5d/src/traj.c,
+	/cvsroot/vis5d/vis5d/src/volume.c,
+	/cvsroot/vis5d/vis5d/src/work.c: This commit is a major change in
+	the internal structures of vis5d.  A vis5d_variable structure was
+	introduced and many of the items from the ctx context were moved
+	into it.  On my machine this resulted in the resident memory used
+	by vis5d being reduced from about 48M to 17M.  I suspect there are
+	a few memory leaks and I am unsure as to the functionality of the
+	irregular data - however I feel this change is well worth any
+	shortterm headaches it may cause.
+
+2001-08-17  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/vis5d+.glade: rearranged HSliceControls and
+	removed color selection to a seperate dialog
+
+	* /cvsroot/vis5d/vis5d/src/work.c: fixed a bug in contour limits
+	selection which caused a crash if the vertical levels are greater
+	than the number of columns in the data.  The bug did not affect
+	the lui5 interface.
+
+2001-08-10  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/vis5d+.glade: update of gtk development.
+	No more button grids.
+
+	* /cvsroot/vis5d/vis5d/src/work.c: improved scheme for computing
+	contour min and max values
+
+2001-08-08  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/vis5d+.glade: gtk interface initial
+	development continues
+
+2001-08-07  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/vis5d+.glade: callbacks.c no longer is
+	used.  Otherwise just moving things around looking for a format
+	that will work.
+
+	* /cvsroot/vis5d/vis5d/src/gl_to_ppm.c,
+	/cvsroot/vis5d/vis5d/src/work.c: In work.c USE_SYSTEM_FONTS needed
+	to wrap labels allocation, in gl_to_ppm.c
+
+	 In all versions of vis5d, the ifdefs in saving images into files
+	  are incorrect, file formats are fixed and do not depend on
+	  endianess.
+
+	Thanks to Jaakko for this one.
+
+	* /cvsroot/vis5d/vis5d/vis5d+.glade: fixed a bug in 'open in new
+	 frame' this wouldnt be worth a commit except that Ive fixed that
+	 bug before and it came back...
+
+	* /cvsroot/vis5d/vis5d/src/api.c, /cvsroot/vis5d/vis5d/src/api.h,
+	/cvsroot/vis5d/vis5d/src/displaywidget.c,
+	/cvsroot/vis5d/vis5d/src/script.c: Added a parameter to the api
+	function vis5d_get_font when compiled with USE_SYSTEM_FONTS this
+	parameter defaults to WINDOW_3D_FONT which is the historical
+	behavior.
+
+	* /cvsroot/vis5d/vis5d/vis5d+.glade: merge of two different
+	development lines
+
+2001-08-06  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/vis5d+.glade: got rid of the seperate
+	preferences window in favor of cascading menus
+
+	* /cvsroot/vis5d/vis5d/src/api.c, /cvsroot/vis5d/vis5d/src/api.h,
+	/cvsroot/vis5d/vis5d/src/contour.c,
+	/cvsroot/vis5d/vis5d/src/contour.h,
+	/cvsroot/vis5d/vis5d/src/globals.h,
+	/cvsroot/vis5d/vis5d/src/graphics.all.c,
+	/cvsroot/vis5d/vis5d/src/graphics.gl.c,
+	/cvsroot/vis5d/vis5d/src/graphics.h,
+	/cvsroot/vis5d/vis5d/src/graphics.ogl.c,
+	/cvsroot/vis5d/vis5d/src/graphics.pex.c,
+	/cvsroot/vis5d/vis5d/src/render.c,
+	/cvsroot/vis5d/vis5d/src/script.c,
+	/cvsroot/vis5d/vis5d/src/sounding.c,
+	/cvsroot/vis5d/vis5d/src/work.c: This commit introduces individual
+	font support for various objects withen the graphics window.  In
+	particular the contour label font can now be selected and sized.
+	To use this option you must currently compile with
+	-DUSE_SYSTEM_FONTS I find that selecting fonts in this manner
+	makes the contour labels much more readable - currently the font
+	is just written over the contour line.  I will probably modify
+	this so that a box is created around the label.  The box created
+	in countour.c is much too large and doesn't change size with zoom.
+
+	NOTE changes in the API
+
+	vis5d_set_font(int index, char *fontname, int size, Fontlist
+	which)
+
+	is added.
+
+	with USE_SYSTEM_FONTS defined int vis5d_get_font_height( int
+	index, int *height ) is changed to int vis5d_get_font_height(int
+	index, int *height, Fontlist which)
+
+	Fontlist is defined in api.h
+
+2001-08-05  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/configure.in: removed check for snprintf -
+	using g_snprintf instead which is provided in glib.
+
+2001-07-30  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/Makefile.am,
+	/cvsroot/vis5d/vis5d/configure.in,
+	/cvsroot/vis5d/vis5d/vis5d+.glade: Makefile.am and configure.in
+	have minor changes to reduce warnings on running autogen.sh.
+	vis5d+.glade has continued gtk interface development - primarily
+	improvement of the toolbar buttons and toggles.
+
+2001-07-27  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/compute.c: Thanks to Victor Homar.
+
+	fix for New Var calculated using variables from two different v5d
+	files attached to the same display.
+
+	* /cvsroot/vis5d/vis5d/Makefile.am,
+	/cvsroot/vis5d/vis5d/autogen.sh,
+	/cvsroot/vis5d/vis5d/configure.in: changes to look for snprintf
+	function, properly handle intl and po directories, build the gtk
+	glade generated files and automatically use --enable-gtk when
+	running configure from autogen.sh
+
+2001-07-26  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/Makefile.am,
+	/cvsroot/vis5d/vis5d/configure.in,
+	/cvsroot/vis5d/vis5d/src/Makefile.am,
+	/cvsroot/vis5d/vis5d/src/gui.h, /cvsroot/vis5d/vis5d/src/main.c,
+	/cvsroot/vis5d/vis5d/src/main_i.c,
+	/cvsroot/vis5d/vis5d/src/ui_i.c,
+	/cvsroot/vis5d/vis5d/vis5d+.glade: Added gtk interface to main
+	distribution.  It does not install and to compile it you need to
+	use --enable-gtk argument to configure
+
+	* /cvsroot/vis5d/vis5d/src/api.c, /cvsroot/vis5d/vis5d/src/api.h:
+	Added function vis5d_gridlevel_to_pressure to api, changed minimum
+	level value in vis5d_set_hslice from 0 to LowLev[var].
+
+2001-07-19  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/topo.c: in looking for the topo header
+	i replaced strcmp with strncmp so that the null byte is not
+	required after TOPO or TOPO2 , this also means that the order had
+	to be reversed in the if/else if.
+
+	* /cvsroot/vis5d/vis5d/src/work.c: In extract_hslicePRIME the
+	LowLev of the dtx rather than that of the variable was being used
+	to extract hslices from a given variable.  This caused variable
+	contours to be displayed at levels below which the variables were
+	undefined.
+
+	A similar change was made in extract_hslice in 1998, i can only
+	assume he overlooked the code in extract_hslicePRIME.
+
+2001-07-19  stevengj  <stevengj@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/util/main.c,
+	/cvsroot/vis5d/vis5d/util/newmap.c: use F77_DUMMY_MAIN from
+	autoconf 2.52
+
+	* /cvsroot/vis5d/vis5d/configure.in: be more tolerant of flaky
+	Fortran installations in autoconf 2.52
+
+	* /cvsroot/vis5d/vis5d/util/Makefile.am,
+	/cvsroot/vis5d/vis5d/util/newmap.c: don't require Fortran
+
+	* /cvsroot/vis5d/vis5d/src/v5d.c,
+	/cvsroot/vis5d/vis5d/src/vtmcP.c: omit Fortran API if a Fortran
+	compiler was not detected
+
+2001-07-18  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/proj.c: removed static declarations for
+	lat lon and hgt in several conversion routines and replaced with
+	malloc calls.  At least on my linux box this makes a significant
+	improvement in memory usage since in most cases the static value
+	was 64000 or more and the amount actually required was 1.
+
+	* /cvsroot/vis5d/vis5d/src/api.c, /cvsroot/vis5d/vis5d/src/api.h,
+	/cvsroot/vis5d/vis5d/src/globals.h,
+	/cvsroot/vis5d/vis5d/src/resample_i.c,
+	/cvsroot/vis5d/vis5d/src/topo.c, /cvsroot/vis5d/vis5d/src/topo.h:
+	improved cleanup of topo structure in free_topo which now takes
+	arg (struct Topo **tptr) and sets *tptr=NULL on exit.
+
+2001-07-18  stevengj  <stevengj@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/configure.in: updatd shared-lib version
+
+	* /cvsroot/vis5d/vis5d/src/v5d.c: add backwards compatibility in
+	4-digit year support
+
+2001-07-17  stevengj  <stevengj@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/AUTHORS, /cvsroot/vis5d/vis5d/NEWS: updated
+
+	* /cvsroot/vis5d/vis5d/src/main.c: expanded -version info
+
+2001-07-17  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/main.c: added an option -version which
+	prints the vis5d+ version number and exits.
+
+	* /cvsroot/vis5d/vis5d/NEWS,
+	/cvsroot/vis5d/vis5d/convert/foo2_to_v5d.f,
+	/cvsroot/vis5d/vis5d/src/render.c, /cvsroot/vis5d/vis5d/src/v5d.c:
+	applied patch This fixes several date problems:
+
+	- Year 2000 problem (you can now optionally specify year with 4
+	  digits) ..now gets the weekday right.  - Year 2100 problem: it
+	  is not a leap year.  - Timestamp comparison was wrong, it would
+	  accept date1 < date0 if time1 > time0.
+
+	  In the fortran callable V5DSETUNITS units were not stripped of
+	trailing white space.  Maybe you can comment on if this is a good
+	fix.
+
+	  I added fortran-callable functions V5DUPDATE and V5DUPDATETIMES,
+	as the functionality was available in C also.  I have not tested
+	those though.  My idea is to incrementally append to a v5d file as
+	the model run creating the data advances, so I can check the early
+	results as soon as they are available..
+
+	Jaakko
+
+	Jaakko Hyvätti <Jaakko.Hyvatti@foreca.com>
+
+2001-07-17  stevengj  <stevengj@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/Makefile.am: removed reference to
+	netcdf_i.h
+
+	* /cvsroot/vis5d/vis5d/NEWS, /cvsroot/vis5d/vis5d/configure.in:
+	bumped version
+
+	* /cvsroot/vis5d/vis5d/ChangeLog: updated
+
+2001-07-17  stevengj  <stevengj@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/Makefile.am: whoops
+
+	* /cvsroot/vis5d/vis5d/src/box.c: whoops, fixed fix
+
+	* /cvsroot/vis5d/vis5d/NEWS, /cvsroot/vis5d/vis5d/src/box.c,
+	/cvsroot/vis5d/vis5d/src/isocolor.c,
+	/cvsroot/vis5d/vis5d/src/render.c,
+	/cvsroot/vis5d/vis5d/src/work.c: synchronized with mainline
+
+	* /cvsroot/vis5d/vis5d/acconfig.h,
+	/cvsroot/vis5d/vis5d/acinclude.m4,
+	/cvsroot/vis5d/vis5d/configure.in,
+	/cvsroot/vis5d/vis5d/src/Makefile.am: updated to autoconf 2.50
+
+2001-07-16  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/NEWS: added message about vcs bug fix in
+	v5dimport
+
+	* /cvsroot/vis5d/vis5d/src/topo_i.c,
+	/cvsroot/vis5d/vis5d/src/topo_i.h: no longer used
+
+2001-07-14  stevengj  <stevengj@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/globals.h: fixed threads compile
+	failure introduced in last commit
+
+	* /cvsroot/vis5d/vis5d/acx_pthread.m4: new upstream version
+	(slight improvement on Solaris)
+
+	* /cvsroot/vis5d/vis5d/src/box.c: slight reformatting
+
+	* /cvsroot/vis5d/vis5d/ChangeLog, /cvsroot/vis5d/vis5d/NEWS:
+	updated
+
+	* /cvsroot/vis5d/vis5d/src/ui_i.c,
+	/cvsroot/vis5d/vis5d/src/work.c: slight formatting change...fit in
+	80-column display
+
+	* /cvsroot/vis5d/vis5d/src/queue.c,
+	/cvsroot/vis5d/vis5d/src/sync.h: fixed threads compile failure
+	introduced in last commit
+
+	* /cvsroot/vis5d/vis5d/src/sounding.c: removed unused decls
+
+2001-07-12  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/analysis.c,
+	/cvsroot/vis5d/vis5d/src/analyze_i.c,
+	/cvsroot/vis5d/vis5d/src/box.c, /cvsroot/vis5d/vis5d/src/chrono.c,
+	/cvsroot/vis5d/vis5d/src/compute.c,
+	/cvsroot/vis5d/vis5d/src/contour.c,
+	/cvsroot/vis5d/vis5d/src/file.c,
+	/cvsroot/vis5d/vis5d/src/file_i.c,
+	/cvsroot/vis5d/vis5d/src/gl_to_ppm.c,
+	/cvsroot/vis5d/vis5d/src/graphics.ogl.c,
+	/cvsroot/vis5d/vis5d/src/grid_i.c,
+	/cvsroot/vis5d/vis5d/src/groupchrono.c,
+	/cvsroot/vis5d/vis5d/src/iapi.c,
+	/cvsroot/vis5d/vis5d/src/irregular_v5d.c,
+	/cvsroot/vis5d/vis5d/src/irregular_v5d.h,
+	/cvsroot/vis5d/vis5d/src/map.c, /cvsroot/vis5d/vis5d/src/misc.c,
+	/cvsroot/vis5d/vis5d/src/misc.h,
+	/cvsroot/vis5d/vis5d/src/output_i.c,
+	/cvsroot/vis5d/vis5d/src/proj.c,
+	/cvsroot/vis5d/vis5d/src/projlist_i.c,
+	/cvsroot/vis5d/vis5d/src/queue.c,
+	/cvsroot/vis5d/vis5d/src/read_epa_i.c,
+	/cvsroot/vis5d/vis5d/src/read_grads_i.c,
+	/cvsroot/vis5d/vis5d/src/read_uwvis_i.c,
+	/cvsroot/vis5d/vis5d/src/record.c,
+	/cvsroot/vis5d/vis5d/src/save.c,
+	/cvsroot/vis5d/vis5d/src/sounding.c,
+	/cvsroot/vis5d/vis5d/src/stream.c,
+	/cvsroot/vis5d/vis5d/src/tclsave.c,
+	/cvsroot/vis5d/vis5d/src/textplot.c,
+	/cvsroot/vis5d/vis5d/src/topo.c, /cvsroot/vis5d/vis5d/src/traj.c,
+	/cvsroot/vis5d/vis5d/src/ui_i.c,
+	/cvsroot/vis5d/vis5d/src/user_data.c,
+	/cvsroot/vis5d/vis5d/src/v5dimport.c,
+	/cvsroot/vis5d/vis5d/src/volume.c,
+	/cvsroot/vis5d/vis5d/src/vtmcP.c, /cvsroot/vis5d/vis5d/src/work.c:
+	Got rid of nearly every warning produced by the gcc version 2.96
+	20000731 (Red Hat Linux 7.1 2.96-81) (libv5dgui excepted).  This
+	may also have fixed a bug in iapi.c when reading a netcdf file.
+
+	* /cvsroot/vis5d/vis5d/src/api.c, /cvsroot/vis5d/vis5d/src/api.h,
+	/cvsroot/vis5d/vis5d/src/grid.h: got rid of all warnings in api.c
+	as produced by gcc compiler version 2.96 20000731 (Red Hat Linux
+	7.1 2.96-81)
+
+2001-07-11  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/configure.in,
+	/cvsroot/vis5d/vis5d/src/Makefile.am: modified for compatibility
+	with the new vis5d+gtk which shares the same repository for
+	vis5d/src with the old lui5 distribution.  I will strive to
+	maintain backward compatibility in development of the gtk+
+	interface but if any problems do come up contact me at
+	jedwards@inmet.gov.br and I'll try to take care of them.
+
+	* /cvsroot/vis5d/vis5d/src/gui.h,
+	/cvsroot/vis5d/vis5d/src/main_i.c,
+	/cvsroot/vis5d/vis5d/src/sounding.c,
+	/cvsroot/vis5d/vis5d/src/tclsave.c,
+	/cvsroot/vis5d/vis5d/src/ui_i.c,
+	/cvsroot/vis5d/vis5d/src/v5dimport.c: added macro variable
+	VIS5DPLUS to indicate whether this is the new gtk distribution or
+	the old lui5 distribution.
+
+	* /cvsroot/vis5d/vis5d/src/main_i.c,
+	/cvsroot/vis5d/vis5d/src/read_gr3d_i.c,
+	/cvsroot/vis5d/vis5d/src/read_grads_i.c,
+	/cvsroot/vis5d/vis5d/src/read_grid_i.c,
+	/cvsroot/vis5d/vis5d/src/read_uwvis_i.c,
+	/cvsroot/vis5d/vis5d/src/read_v5d_i.c: changed reference to
+	include file v5d.h from ../src/v5d.h to v5d.h
+
+	* /cvsroot/vis5d/vis5d/src/ui_i.c: modified to allow number of
+	vertical levels = 1
+
+	* /cvsroot/vis5d/vis5d/src/render.c: fixed a null pointer
+	assigment introduced in the topo structure change
+
+	* /cvsroot/vis5d/vis5d/src/api.c: fixed a null pointer error
+	introduced in the recent topo structure change.
+
+	* /cvsroot/vis5d/vis5d/src/box.c: no need to call opengl routine
+	if vertices==0
+
+2001-06-08  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/api.c, /cvsroot/vis5d/vis5d/src/api.h,
+	/cvsroot/vis5d/vis5d/src/globals.h,
+	/cvsroot/vis5d/vis5d/src/main.c,
+	/cvsroot/vis5d/vis5d/src/render.c,
+	/cvsroot/vis5d/vis5d/src/save.c, /cvsroot/vis5d/vis5d/src/topo.c:
+	Moved the ColorTable information out of Display_Context and into
+	its own structure.  Display_Context now has an array of pointers
+	to ColorTables, which are allocated in new_display_context.
+
+	TODO: I think it would be better to defer the allocation until
+	they are going to be assigned and used.
+
+	* /cvsroot/vis5d/vis5d/src/Makefile.am,
+	/cvsroot/vis5d/vis5d/src/displaywidget.c,
+	/cvsroot/vis5d/vis5d/src/grid_i.c,
+	/cvsroot/vis5d/vis5d/src/gui_i.c,
+	/cvsroot/vis5d/vis5d/src/memory.c,
+	/cvsroot/vis5d/vis5d/src/memory.h,
+	/cvsroot/vis5d/vis5d/src/output_i.c,
+	/cvsroot/vis5d/vis5d/src/projlist_i.c,
+	/cvsroot/vis5d/vis5d/src/read_grid_i.c,
+	/cvsroot/vis5d/vis5d/src/resample_i.c: moved code from memory_i.c
+	to memory.c and removed memory_i from Makefile.am modified include
+	of memory_i.h to memory.h
+
+	memory_i.c and memory_i.h are no longer needed in distribution
+
+	* /cvsroot/vis5d/vis5d/src/api.c, /cvsroot/vis5d/vis5d/src/main.c:
+	removed call to vis5d_init_topo_and_map_ctx and replaced with a
+	call to vis5d_init_topo - vis5d_init_map had already been called
+	in main.
+
+2001-06-07  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/Makefile.am,
+	/cvsroot/vis5d/vis5d/src/api.c,
+	/cvsroot/vis5d/vis5d/src/globals.h,
+	/cvsroot/vis5d/vis5d/src/map.c, /cvsroot/vis5d/vis5d/src/render.c,
+	/cvsroot/vis5d/vis5d/src/resample_i.c,
+	/cvsroot/vis5d/vis5d/src/sounding.c,
+	/cvsroot/vis5d/vis5d/src/topo.c, /cvsroot/vis5d/vis5d/src/topo.h,
+	/cvsroot/vis5d/vis5d/src/user_data.c,
+	/cvsroot/vis5d/vis5d/src/work.c: Hi,
+
+	By taking the topo information out of the monolithic
+	Display_context structure and creating a seperate topo structure I
+	was able to call the functions in topo.c from resample_i.c and
+	thus could get rid of file topo_i.c.  I've removed that file from
+	the Makefile.am and thus the library, should also do a cvs remove
+	but will wait a little.
+
+	Jim
+
+	* /cvsroot/vis5d/vis5d/src/resample_i.c,
+	/cvsroot/vis5d/vis5d/src/resample_i.h,
+	/cvsroot/vis5d/vis5d/src/topo_i.c,
+	/cvsroot/vis5d/vis5d/src/v5dimport.c: The topo file used when
+	doing interpolation in v5dimport was hard coded to EARTH.topo in
+	the local directory.  I modified it to accept environment
+	variables VIS5D_PATH and VIS5D_TOPO and to use the DATA_PREFIX
+	defined in ../config.h and EARTH.TOPO otherwise.
+
+	I put these in v5dimport.c so it is probably still broken when run
+	from vis5d proper.
+
+	* /cvsroot/vis5d/vis5d/src/file_i.c: Removed an abitrary
+	restriction on the minimum size of a file to be imported which
+	caused certain small grads header files to fail to be imported.
+
+2001-06-06  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/projlist_i.c: Function new_vcs was not
+	correctly handling the lowlev variable when importing from a vis5d
+	file.For example, if a vcs had 4 levels 1012 1000 750 500 and a
+	variable had lowlev=1 Nl=3, that variable should be defined on
+	levels 1000 750 and 500, but v5dimport was ignoring the lowlev and
+	using levels 1012 1000 and 750.
+
+	* /cvsroot/vis5d/vis5d/src/read_grads_i.c: Treat a grads 2d var
+	with levels specified as 0 as a surface var.
+
+	* /cvsroot/vis5d/vis5d/src/output_i.c: Now prints a warning to
+	stdout when an entire field is written as missing.
+
+	* /cvsroot/vis5d/vis5d/src/select_i.c: modified so that selecting
+	a variable to keep also selects it's projection and vcs.
+
+2001-06-05  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/read_grads_i.c: Fixed a bug in getting
+	the grads file name when the dset name in the control file begins
+	with ^ which, according to the grads manual, means that the data
+	file is to be found in the same directory as the control file.
+
+2001-06-01  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/projlist_i.c: corrected error message
+	and improved output from list command for vcs when unequal_mb is
+	used.
+
+	* /cvsroot/vis5d/vis5d/src/read_grads_i.c: Fixed a bug introduced
+	in the last commit which caused the first character of the data
+	file name to be lost when the grads ctl and data file are both in
+	the current directory.  Corrected reading of levels to be
+	unequal_mb (was unequal_heights) and replaced pressure to height
+	conversion with the one used by the rest of vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/ui_i.c: fixed bug in 'omit all' option.
+	Replaced hard coded values for vcs with vcs macro values.
+	corrected info printed for VERT_UNEQUAL_MB.
+
+2001-05-07  jedwards  <jedwards@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/read_grads_i.c: added support for grads
+	control file OPTIONS BIG_ENDIAN and LITTLE_ENDIAN.
+
+2001-01-28  stevengj  <stevengj@sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/NEWS: updated
+
+	* /cvsroot/vis5d/vis5d/util/Makefile.am: don't build useless
+	'help' program
+
+	* /cvsroot/vis5d/vis5d/ChangeLog, /cvsroot/vis5d/vis5d/NEWS:
+	updated
+
+	* /cvsroot/vis5d/vis5d/util/Makefile.am: build more tools by
+	default, but don't install them since the original Vis5d doesn't
+	even build them normally
+
+2001-01-04  stevengj  <stevengj@users.sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/acx_pthread.m4: updated
+
+2000-12-10  stevengj  <stevengj@users.sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/read_grads_i.c: Removed non-free
+	template-expansion function from GrADS code, and replaced it with
+	"clean-room" implementation based on a spec. provided by Conrad
+	Poelman.
+
+	* /cvsroot/vis5d/vis5d/acx_pthread.m4,
+	/cvsroot/vis5d/vis5d/ChangeLog: updated
+
+2000-11-28  jedwards  <jedwards@users.sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/configure.in: removed import directory
+
+2000-11-28  jedwards  <jedwards@users.sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/configure.in: removed import directory
+
+2000-11-08  jedwards  <jedwards@users.sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/api.c, /cvsroot/vis5d/vis5d/src/work.c:
+	This change allows vis5d_set_hslice to choose reasonable values
+	based on the data to be contoured when the value of interval
+	passed in is set to 0.  TODO: update api document regarding
+	vis5d_set_hslice.
+
+	* /cvsroot/vis5d/vis5d/src/api.c,
+	/cvsroot/vis5d/vis5d/src/globals.h,
+	/cvsroot/vis5d/vis5d/src/render.c: Moved variable LabelColor from
+	structure datacontext to label structure so that each label may be
+	individually colored.  Default color is white as before, label
+	color is changed through the vis5d_set_color where number is now
+	the label_id.  vis5d_make_label returns the label_id if
+	successful.
+
+	ToDo: The api documentation should be updated.  The make_label
+	should probably return an error if the coordinates of the label
+	position are outside the clipping plane (in which case it doesn't
+	print)
+
+	* /cvsroot/vis5d/vis5d/src/file.c,
+	/cvsroot/vis5d/vis5d/src/iapi.c: Relaxed conditions to read fsl
+	netcdf files slightly so that this code can also be used to read
+	my SYNOP files of otherwise the same format.  Added an ERROR
+	message for the case of trying to open a non-NetCDF file as
+	irregular data.
+
+2000-11-07  stevengj  <stevengj@users.sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/acx_pthread.m4: Updated, fixing Solaris bug
+
+2000-10-28  stevengj  <stevengj@users.sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/doc/acknowledgments.sgml: another grammar
+	fix
+
+	* /cvsroot/vis5d/vis5d/doc/acknowledgments.sgml: grammar fix
+
+	* /cvsroot/vis5d/vis5d/doc/Makefile.am,
+	/cvsroot/vis5d/vis5d/doc/acknowledgments.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap10.sgml,
+	/cvsroot/vis5d/vis5d/doc/license.sgml,
+	/cvsroot/vis5d/vis5d/doc/vis5d.sgml: added acknowledgments,
+	renamed license chapter
+
+	* /cvsroot/vis5d/vis5d/src/v5d.c,
+	/cvsroot/vis5d/vis5d/util/makemap.c,
+	/cvsroot/vis5d/vis5d/util/maketopo.c,
+	/cvsroot/vis5d/vis5d/util/topoinfo.c,
+	/cvsroot/vis5d/vis5d/configure.in: Added missing header files,
+	which caused problems on some systems (e.g. Solaris).
+
+	* /cvsroot/vis5d/vis5d/AUTHORS: added Jim's institution
+
+2000-10-27  stevengj  <stevengj@users.sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/AUTHORS, /cvsroot/vis5d/vis5d/ChangeLog:
+	updated
+
+	* /cvsroot/vis5d/vis5d/src/api.c, /cvsroot/vis5d/vis5d/src/grid.c,
+	/cvsroot/vis5d/vis5d/src/main.c, /cvsroot/vis5d/vis5d/src/v5d.c:
+	Please don't leave commented-out source in the code, unless it
+	adds to the clarity.  Merely keeping track of the change history
+	is what CVS is for.
+
+2000-10-27  jedwards  <jedwards@users.sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/api.c, /cvsroot/vis5d/vis5d/src/api.h,
+	/cvsroot/vis5d/vis5d/src/graphics.ogl.c,
+	/cvsroot/vis5d/vis5d/src/grid.c, /cvsroot/vis5d/vis5d/src/gui.c,
+	/cvsroot/vis5d/vis5d/src/main.c,
+	/cvsroot/vis5d/vis5d/src/render.c,
+	/cvsroot/vis5d/vis5d/src/topo.c, /cvsroot/vis5d/vis5d/src/v5d.c:
+	This is a continued clean up of the source code which removes a
+	lot of unused code and moves lui5 code out of the api interface.
+	Also a new variable and api function has been added, the function
+	is vis5d_set_verbose_level and this can be used to set the level
+	of stdout verbosity of vis5d.  A number of values have been
+	defined in api.h as follows:
+
+	  /*** Verbose Levels ***/ #define VERBOSE_DATA 1 #define
+	VERBOSE_DISPLAY 2 #define VERBOSE_IRREGULAR 4 #define
+	VERBOSE_REDRAW 8 #define VERBOSE_OPENGL 16 #define VERBOSE_RENDER
+	32 #define VERBOSE_ALL 2147483648
+
+	these values can be bitwise ored together.  Note that using the
+	VERBOSE_REDRAW value can be very noisy as redraw is called several
+	times per second as vis5d passes through it's event loop.
+	Currently there is no command line interface to set the verbose
+	level in the vis5d program, but there is no reason you couldn't
+	put it there :-)
+
+2000-10-23  stevengj  <stevengj@users.sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/vis5d.h: Fixed typo that prevented
+	--with-memory configure option from working.  Fix submitted by
+	Andrew Woolf.
+
+2000-10-04  stevengj  <stevengj@users.sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/util/Makefile.am: Whoops, automake uses the
+	Fortran linker whenever *any* of the sources are in Fortran, which
+	doesn't seem to be the right thing if the main() function is in C.
+	This is remedied by specifically setting the LINK command for
+	those programs.
+
+	* /cvsroot/vis5d/vis5d/configure.in,
+	/cvsroot/vis5d/vis5d/util/Makefile.am: Fixed some problems under
+	Tru64 Unix, reported by Frederic Chagnon.  First, the grep usage
+	in configure.in is replaced with more portable, and cleaner, sh
+	case statements.  Second, the Fortran utilities in utils/ need to
+	be linked with the C compiler, apparently.  Also, got rid of
+	libmain.a and just linked the object files directly.
+
+2000-09-30  stevengj  <stevengj@users.sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/import/tokenize.h,
+	/cvsroot/vis5d/vis5d/import/tokenize_i.c,
+	/cvsroot/vis5d/vis5d/import/tokenize_i.h,
+	/cvsroot/vis5d/vis5d/import/topo.c,
+	/cvsroot/vis5d/vis5d/import/topo.h,
+	/cvsroot/vis5d/vis5d/import/topo_i.c,
+	/cvsroot/vis5d/vis5d/import/topo_i.h,
+	/cvsroot/vis5d/vis5d/import/uam.c,
+	/cvsroot/vis5d/vis5d/import/uam_i.c,
+	/cvsroot/vis5d/vis5d/import/ui.c,
+	/cvsroot/vis5d/vis5d/import/ui.h,
+	/cvsroot/vis5d/vis5d/import/ui_i.c,
+	/cvsroot/vis5d/vis5d/import/ui_i.h,
+	/cvsroot/vis5d/vis5d/doc/chap2.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap7.sgml,
+	/cvsroot/vis5d/vis5d/import/Makefile.am,
+	/cvsroot/vis5d/vis5d/import/README,
+	/cvsroot/vis5d/vis5d/import/alpha.c,
+	/cvsroot/vis5d/vis5d/import/analyze.c,
+	/cvsroot/vis5d/vis5d/import/analyze.h,
+	/cvsroot/vis5d/vis5d/import/areal.c,
+	/cvsroot/vis5d/vis5d/import/file.c,
+	/cvsroot/vis5d/vis5d/import/file.h,
+	/cvsroot/vis5d/vis5d/import/grid.c,
+	/cvsroot/vis5d/vis5d/import/grid.h,
+	/cvsroot/vis5d/vis5d/import/gui.c,
+	/cvsroot/vis5d/vis5d/import/gui.h,
+	/cvsroot/vis5d/vis5d/import/julian2std.c,
+	/cvsroot/vis5d/vis5d/import/kltwin.f,
+	/cvsroot/vis5d/vis5d/import/main.c,
+	/cvsroot/vis5d/vis5d/import/memory.c,
+	/cvsroot/vis5d/vis5d/import/memory.h,
+	/cvsroot/vis5d/vis5d/import/misc.c,
+	/cvsroot/vis5d/vis5d/import/misc.h,
+	/cvsroot/vis5d/vis5d/import/mm4.c,
+	/cvsroot/vis5d/vis5d/import/mm4date2std.c,
+	/cvsroot/vis5d/vis5d/import/model.c,
+	/cvsroot/vis5d/vis5d/import/model.h,
+	/cvsroot/vis5d/vis5d/import/netcdf.h,
+	/cvsroot/vis5d/vis5d/import/netcdf2julian.c,
+	/cvsroot/vis5d/vis5d/import/output.c,
+	/cvsroot/vis5d/vis5d/import/output.h,
+	/cvsroot/vis5d/vis5d/import/outputold.c,
+	/cvsroot/vis5d/vis5d/import/proj.c,
+	/cvsroot/vis5d/vis5d/import/proj.h,
+	/cvsroot/vis5d/vis5d/import/proj2.c,
+	/cvsroot/vis5d/vis5d/import/proj2_i.c,
+	/cvsroot/vis5d/vis5d/import/proj_i.c,
+	/cvsroot/vis5d/vis5d/import/proj_i.h,
+	/cvsroot/vis5d/vis5d/import/projlist.c,
+	/cvsroot/vis5d/vis5d/import/projlist.h,
+	/cvsroot/vis5d/vis5d/import/projlist_i.c,
+	/cvsroot/vis5d/vis5d/import/projlist_i.h,
+	/cvsroot/vis5d/vis5d/import/radm.c,
+	/cvsroot/vis5d/vis5d/import/radm_emis.c,
+	/cvsroot/vis5d/vis5d/import/radm_emis_i.c,
+	/cvsroot/vis5d/vis5d/import/radm_i.c,
+	/cvsroot/vis5d/vis5d/import/read_epa.c,
+	/cvsroot/vis5d/vis5d/import/read_epa.h,
+	/cvsroot/vis5d/vis5d/import/read_epa_i.c,
+	/cvsroot/vis5d/vis5d/import/read_epa_i.h,
+	/cvsroot/vis5d/vis5d/import/read_gr3d.c,
+	/cvsroot/vis5d/vis5d/import/read_gr3d.h,
+	/cvsroot/vis5d/vis5d/import/read_gr3d_i.c,
+	/cvsroot/vis5d/vis5d/import/read_gr3d_i.h,
+	/cvsroot/vis5d/vis5d/import/read_grads.c,
+	/cvsroot/vis5d/vis5d/import/read_grads.h,
+	/cvsroot/vis5d/vis5d/import/read_grads_i.c,
+	/cvsroot/vis5d/vis5d/import/read_grads_i.h,
+	/cvsroot/vis5d/vis5d/import/read_grid.c,
+	/cvsroot/vis5d/vis5d/import/read_grid.h,
+	/cvsroot/vis5d/vis5d/import/read_grid_i.c,
+	/cvsroot/vis5d/vis5d/import/read_grid_i.h,
+	/cvsroot/vis5d/vis5d/import/read_uwvis.c,
+	/cvsroot/vis5d/vis5d/import/read_uwvis.h,
+	/cvsroot/vis5d/vis5d/import/read_uwvis_i.c,
+	/cvsroot/vis5d/vis5d/import/read_uwvis_i.h,
+	/cvsroot/vis5d/vis5d/import/read_v5d.c,
+	/cvsroot/vis5d/vis5d/import/read_v5d.h,
+	/cvsroot/vis5d/vis5d/import/read_v5d_i.c,
+	/cvsroot/vis5d/vis5d/import/read_v5d_i.h,
+	/cvsroot/vis5d/vis5d/import/resample.c,
+	/cvsroot/vis5d/vis5d/import/resample.h,
+	/cvsroot/vis5d/vis5d/import/resample_i.c,
+	/cvsroot/vis5d/vis5d/import/resample_i.h,
+	/cvsroot/vis5d/vis5d/import/rom.c,
+	/cvsroot/vis5d/vis5d/import/rom_i.c,
+	/cvsroot/vis5d/vis5d/import/select.c,
+	/cvsroot/vis5d/vis5d/import/select.h,
+	/cvsroot/vis5d/vis5d/import/select_i.c,
+	/cvsroot/vis5d/vis5d/import/select_i.h,
+	/cvsroot/vis5d/vis5d/import/tokenize.c,
+	/cvsroot/vis5d/vis5d/Makefile.am: removed now-redundant import/
+	dir
+
+	* /cvsroot/vis5d/vis5d/configure.in,
+	/cvsroot/vis5d/vis5d/src/Makefile.am,
+	/cvsroot/vis5d/vis5d/util/Makefile.am: libvis5dgui is now a static
+	library, and is not installed; there is no point since it depends
+	upon liblui, which we don't install.  Also, recreated libv5d.la,
+	since otherwise programs that just want to do file I/O need to
+	link with X11, OpenGL, etcetera to prevent link errors.
+	configure.in needs to call AM_LIBTOOL, not AC_LIBTOOL.
+
+2000-09-28  jedwards  <jedwards@users.sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/Makefile.am: added libvis5dgui for
+	those who use the api and the lui
+
+	* /cvsroot/vis5d/vis5d/Makefile.am,
+	/cvsroot/vis5d/vis5d/configure.in,
+	/cvsroot/vis5d/vis5d/import/Makefile.am,
+	/cvsroot/vis5d/vis5d/src/Makefile.am,
+	/cvsroot/vis5d/vis5d/src/api.c, /cvsroot/vis5d/vis5d/src/api.h,
+	/cvsroot/vis5d/vis5d/src/box.c,
+	/cvsroot/vis5d/vis5d/src/graphics.h,
+	/cvsroot/vis5d/vis5d/src/graphics.ogl.c,
+	/cvsroot/vis5d/vis5d/src/grid.c, /cvsroot/vis5d/vis5d/src/gui.c,
+	/cvsroot/vis5d/vis5d/src/main_i.c,
+	/cvsroot/vis5d/vis5d/src/proj.c,
+	/cvsroot/vis5d/vis5d/src/read_grid_i.c,
+	/cvsroot/vis5d/vis5d/src/sounding.c,
+	/cvsroot/vis5d/vis5d/src/topo.c, /cvsroot/vis5d/vis5d/src/v5d.c,
+	/cvsroot/vis5d/vis5d/src/v5d.h, /cvsroot/vis5d/vis5d/src/work.c,
+	/cvsroot/vis5d/vis5d/util/Makefile.am,
+	/cvsroot/vis5d/vis5d/util/fromxwd.c,
+	/cvsroot/vis5d/vis5d/util/main.c: merge of api_exp_branch into
+	main.  Changes include merge of libv5d and libvis5d.  and
+	exclusion of all gui dependent calls from libvis5d.
+
+	* /cvsroot/vis5d/vis5d/src/Makefile.am,
+	/cvsroot/vis5d/vis5d/src/api.c, /cvsroot/vis5d/vis5d/src/api.h:
+	removed the libv5d and moved it's contents to libvis5d.
+
+2000-09-25  poelmanc  <poelmanc@users.sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/proj_i.c: Fixed a crasher, added
+	bounds-check to vertical levels interpolation code
+
+	* /cvsroot/vis5d/vis5d/src/read_grads_i.c: Make GrADS keyword
+	comparisons case-insensitive, add support for PDEF statement,
+	handle "options template" and "options byteswapped"
+
+	* /cvsroot/vis5d/vis5d/src/file_i.c: Make test for GrADS files
+	case-insensitive
+
+	* /cvsroot/vis5d/vis5d/src/misc_i.h: Cheezy #defines for WIN32
+	strcasecmp, should be autoconf-iscated instead!
+
+	* /cvsroot/vis5d/vis5d/src/Makefile.am: Makefile now builds
+	v5dimport right here without needing separate "import" directory
+	or any of the code there.
+
+	* /cvsroot/vis5d/vis5d/src/v5dimport.c: Trivial "main" for
+	v5dimport executable.
+
+	* /cvsroot/vis5d/vis5d/src/gui.c,
+	/cvsroot/vis5d/vis5d/src/gui_i.h,
+	/cvsroot/vis5d/vis5d/src/main_i.c,
+	/cvsroot/vis5d/vis5d/src/main_i.h: Minor mods to pass "standalone"
+	flag to v5dimport code to indicate whether runnig from vis5d or
+	from standalone v5dimport executable.
+
+	* /cvsroot/vis5d/vis5d/src/gui_i.c: "IMPORT" GUI code now
+	generalized so it can also be used for the standalone v5dimport
+	program, eliminates need for separate "import" directory.
+
+	* /cvsroot/vis5d/vis5d/src/proj2_i.c: Removing completely unused
+	file with no redeeming value
+
+	* /cvsroot/vis5d/vis5d/src/work.c: Better error reporting when
+	can't draw contour lines due to missing or constant data (used to
+	give misleading message: "You don't have enough memory to draw
+	hslices")
+
+	* /cvsroot/vis5d/vis5d/src/graphics.ogl.c,
+	/cvsroot/vis5d/vis5d/src/image.c,
+	/cvsroot/vis5d/vis5d/src/volume.c,
+	/cvsroot/vis5d/vis5d/src/gl_to_ppm.c,
+	/cvsroot/vis5d/vis5d/src/graphics.h: Added OpenGL error-checking
+	after all OpenGL commands to more accurately identify the source
+	of any OpenGL errors.
+
+	* /cvsroot/vis5d/vis5d/src/alpha_i.c,
+	/cvsroot/vis5d/vis5d/src/areal_i.c,
+	/cvsroot/vis5d/vis5d/src/julian2std_i.c,
+	/cvsroot/vis5d/vis5d/src/mm4_i.c,
+	/cvsroot/vis5d/vis5d/src/mm4date2std_i.c,
+	/cvsroot/vis5d/vis5d/src/model_i.c,
+	/cvsroot/vis5d/vis5d/src/netcdf2julian_i.c,
+	/cvsroot/vis5d/vis5d/src/netcdf_i.h,
+	/cvsroot/vis5d/vis5d/src/radm_emis_i.c,
+	/cvsroot/vis5d/vis5d/src/radm_i.c,
+	/cvsroot/vis5d/vis5d/src/rom_i.c,
+	/cvsroot/vis5d/vis5d/src/uam_i.c: These files have never been
+	used, moved into contrib/epa to remove clutter.
+
+2000-09-21  jedwards  <jedwards@users.sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/api.c,
+	/cvsroot/vis5d/vis5d/src/graphics.ogl.c,
+	/cvsroot/vis5d/vis5d/src/grid.c, /cvsroot/vis5d/vis5d/src/v5d.c,
+	/cvsroot/vis5d/vis5d/src/v5d.h: modifications to the api for the
+	addition of an external gui
+
+	* /cvsroot/vis5d/vis5d/src/main_i.c,
+	/cvsroot/vis5d/vis5d/src/read_grid_i.c,
+	/cvsroot/vis5d/vis5d/src/sounding.c: more changes to get the gui
+	out of the api
+
+	* /cvsroot/vis5d/vis5d/src/Makefile.am: back to just two libraries
+	but rearranged so that linking libvis5d and libv5d only give you
+	an (almost) working api.  Exceptions are in api.c : int
+	vis5d_map_sndwindow( int index) int vis5d_unmap_sndwindow( int
+	index ) seem to be gui functions.
+
+2000-09-18  jedwards  <jedwards@users.sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/work.c,
+	/cvsroot/vis5d/vis5d/util/main.c,
+	/cvsroot/vis5d/vis5d/Makefile.am,
+	/cvsroot/vis5d/vis5d/configure.in,
+	/cvsroot/vis5d/vis5d/src/Makefile.am,
+	/cvsroot/vis5d/vis5d/src/api.c, /cvsroot/vis5d/vis5d/src/api.h,
+	/cvsroot/vis5d/vis5d/src/box.c,
+	/cvsroot/vis5d/vis5d/src/graphics.h,
+	/cvsroot/vis5d/vis5d/src/graphics.ogl.c,
+	/cvsroot/vis5d/vis5d/src/grid.c, /cvsroot/vis5d/vis5d/src/proj.c,
+	/cvsroot/vis5d/vis5d/src/topo.c, /cvsroot/vis5d/vis5d/src/v5d.c:
+	Began the process of seperating the api from the gui.  Modified
+	the Makefile.am so that a target API creates a library
+	libvis5dapi.la which contains only modules needed by the API.
+	This library is compiled with cpp define APIONLY.  The goal here
+	is to create a new API which accesses vis5d functions only through
+	the API, extending the API if nessasary to do so.  One aspect of
+	doing this is to seperate calls to Xlib functions from the API.
+
+	Also began cleaning up the code by removing declared but unused
+	variables.
+
+2000-09-13  stevengj  <stevengj@users.sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/Makefile.am: removed redundant .o files
+	list
+
+2000-09-11  reimann  <reimann@users.sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/doc/chap1.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap3.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap4.sgml: fixed parsing
+
+2000-09-09  stevengj  <stevengj@users.sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/NEWS: slight fix
+
+	* /cvsroot/vis5d/vis5d/ChangeLog, /cvsroot/vis5d/vis5d/NEWS:
+	updated
+
+	* /cvsroot/vis5d/vis5d/AUTHORS: Added Axel Reimann.
+
+	* /cvsroot/vis5d/vis5d/doc/Makefile.am,
+	/cvsroot/vis5d/vis5d/doc/chap1.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap10.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap2.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap3.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap4.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap6.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap7.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap8.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap9.sgml,
+	/cvsroot/vis5d/vis5d/doc/vis5d.sgml: many updates
+
+2000-09-09  stevengj  <stevengj@users.sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/AUTHORS: Added Axel Reimann.
+
+	* /cvsroot/vis5d/vis5d/doc/Makefile.am,
+	/cvsroot/vis5d/vis5d/doc/chap1.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap10.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap2.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap3.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap4.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap6.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap7.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap8.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap9.sgml,
+	/cvsroot/vis5d/vis5d/doc/vis5d.sgml: many updates
+
+2000-09-08  reimann  <reimann@users.sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/doc/chap1.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap2.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap3.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap4.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap5.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap6.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap7.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap8.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap9.sgml: added cross references;
+	corrected crosslinks
+
+	* /cvsroot/vis5d/vis5d/doc/chap2.sgml: added indentation
+
+2000-09-08  stevengj  <stevengj@users.sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/doc/Makefile.am: added index.html
+
+2000-09-07  reimann  <reimann@users.sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/doc/chap1.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap2.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap3.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap4.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap5.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap6.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap7.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap8.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap9.sgml,
+	/cvsroot/vis5d/vis5d/doc/vis5d.sgml: changed to book format
+	corrected links added even more tags
+
+2000-09-07  stevengj  <stevengj@users.sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/configure.in,
+	/cvsroot/vis5d/vis5d/doc/Makefile.am: use db2x docbook scripts
+
+	* /cvsroot/vis5d/vis5d/doc/Makefile.am,
+	/cvsroot/vis5d/vis5d/Makefile.am,
+	/cvsroot/vis5d/vis5d/configure.in: Added Makefile for DocBook
+	manual.
+
+	* /cvsroot/vis5d/vis5d/README: re-added tiny README, as required
+	to be GNU-ly correct
+
+	* /cvsroot/vis5d/vis5d/README: deleted
+
+	* /cvsroot/vis5d/vis5d/doc/v5d_doc.sgml,
+	/cvsroot/vis5d/vis5d/doc/vis5d.sgml: renamed
+
+2000-09-06  stevengj  <stevengj@users.sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/doc/chap1.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap2.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap3.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap4.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap5.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap6.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap7.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap8.sgml,
+	/cvsroot/vis5d/vis5d/doc/chap9.sgml,
+	/cvsroot/vis5d/vis5d/doc/v5d_doc.sgml: added DocBook manual from
+	Axel Reimann
+
+2000-08-31  stevengj  <stevengj@users.sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/script.c: fix from mainline tree
+
+2000-08-29  stevengj  <stevengj@users.sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/src/sounding.c: added 8/29 fix from
+	mainline tree
+
+	* /cvsroot/vis5d/vis5d/lui5/newbutton.c: Fixed bug reported by
+	Axel Reimann, triggered by:
+
+	open hole.v5d, press DISPLAY, press Options, press Done, press
+	Return to Vis5d.
+
+	Problem was that ButtonSetState was being called on temp_button,
+	which was NULL because vertsys == 0 (sigh).
+
+2000-08-26  stevengj  <stevengj@users.sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/NEWS, /cvsroot/vis5d/vis5d/src/api.c,
+	/cvsroot/vis5d/vis5d/src/sounding.c: fixed another bug in -wdpy,
+	this time with the sounding window
+
+	* /cvsroot/vis5d/vis5d/NEWS, /cvsroot/vis5d/vis5d/configure.in,
+	/cvsroot/vis5d/vis5d/src/api.c: fixed crashing bug with -wdpy
+
+2000-08-24  stevengj  <stevengj@users.sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/NEWS, /cvsroot/vis5d/vis5d/configure.in:
+	updated
+
+	* /cvsroot/vis5d/vis5d/src/sounding.c,
+	/cvsroot/vis5d/vis5d/src/gui.c: fixed font loading bug if sounding
+	font is not available
+
+	* /cvsroot/vis5d/vis5d/src/sounding.c: removed DONOTUSE code
+
+	* /cvsroot/vis5d/vis5d/NEWS, /cvsroot/vis5d/vis5d/README,
+	/cvsroot/vis5d/vis5d/configure.in: noted threads bugfix, and fixed
+	installation of data files
+
+	* /cvsroot/vis5d/vis5d/src/contour.c,
+	/cvsroot/vis5d/vis5d/src/work.c: fixed contour stack overflow bug
+
+2000-08-06  stevengj  <stevengj@users.sourceforge.net>
+
+	* /cvsroot/vis5d/vis5d/import/Makefile.am,
+	/cvsroot/vis5d/vis5d/util/Makefile.am: fix so that it works if we
+	build in a directory other than the source dir
+
+	* /cvsroot/vis5d/vis5d/NEWS: Updated.
+
+	* /cvsroot/vis5d/vis5d/util/fromxwd.c,
+	/cvsroot/vis5d/vis5d/util/main.c,
+	/cvsroot/vis5d/vis5d/import/proj.c,
+	/cvsroot/vis5d/vis5d/lui5/buttonmatrix.c,
+	/cvsroot/vis5d/vis5d/lui5/event.c,
+	/cvsroot/vis5d/vis5d/lui5/label.c,
+	/cvsroot/vis5d/vis5d/lui5/lui.c, /cvsroot/vis5d/vis5d/lui5/lui.h,
+	/cvsroot/vis5d/vis5d/src/api.c,
+	/cvsroot/vis5d/vis5d/src/displaywidget.c,
+	/cvsroot/vis5d/vis5d/src/file.c,
+	/cvsroot/vis5d/vis5d/src/graphics.h,
+	/cvsroot/vis5d/vis5d/src/grid.c, /cvsroot/vis5d/vis5d/src/grid.h,
+	/cvsroot/vis5d/vis5d/src/gui.c, /cvsroot/vis5d/vis5d/src/igrid.c,
+	/cvsroot/vis5d/vis5d/src/imemory.c,
+	/cvsroot/vis5d/vis5d/src/main.c,
+	/cvsroot/vis5d/vis5d/src/memory.c,
+	/cvsroot/vis5d/vis5d/src/proj_i.c,
+	/cvsroot/vis5d/vis5d/src/render.c,
+	/cvsroot/vis5d/vis5d/src/script.c,
+	/cvsroot/vis5d/vis5d/src/soundingGUI.c,
+	/cvsroot/vis5d/vis5d/src/user_data.c,
+	/cvsroot/vis5d/vis5d/src/v5d.c, /cvsroot/vis5d/vis5d/src/volume.c,
+	/cvsroot/vis5d/vis5d/src/volume.h,
+	/cvsroot/vis5d/vis5d/src/work.c, /cvsroot/vis5d/vis5d/src/work.h:
+	got rid of some more compiler warnings
+
+2000-08-06  stevengj  <stevengj@alum.mit.edu>
+
+	* /cvsroot/vis5d/vis5d/src/gui.c: fixed bug for hidden colorbar
+	windows
+
+	* /cvsroot/vis5d/vis5d/src/sync.h: added POSIX mutex lock support
+
+	* /cvsroot/vis5d/vis5d/src/api.c,
+	/cvsroot/vis5d/vis5d/src/globals.h,
+	/cvsroot/vis5d/vis5d/src/memory.c: made check for init_memory more
+	explicit and safer
+
+	* /cvsroot/vis5d/vis5d/NEWS, /cvsroot/vis5d/vis5d/acx_pthread.m4,
+	/cvsroot/vis5d/vis5d/configure.in: updated thread library
+	detection
+
+	* /cvsroot/vis5d/vis5d/src/api.c, /cvsroot/vis5d/vis5d/src/work.c,
+	/cvsroot/vis5d/vis5d/src/work.h: fixed thread function prototype
+
+2000-08-05  stevengj  <stevengj@alum.mit.edu>
+
+	* /cvsroot/vis5d/vis5d/NEWS: fixed typo
+
+	* /cvsroot/vis5d/vis5d/Makefile.am, /cvsroot/vis5d/vis5d/NEWS,
+	/cvsroot/vis5d/vis5d/configure.in: README.ps no longer distributed
+	(out of date)
+
+	* /cvsroot/vis5d/vis5d/util/Makefile.in,
+	/cvsroot/vis5d/vis5d/Makefile.in,
+	/cvsroot/vis5d/vis5d/import/Makefile.in,
+	/cvsroot/vis5d/vis5d/lui5/Makefile.in,
+	/cvsroot/vis5d/vis5d/src/Makefile.in: Makefile.in should not be in
+	cvs
+
+	* /cvsroot/vis5d/vis5d/PORTING, /cvsroot/vis5d/vis5d/autogen.sh:
+	added autogen script
+
+	* /cvsroot/vis5d/vis5d/src/sounding.c.old2: got rid of unnecessary
+	file
+
+	* /cvsroot/vis5d/vis5d/contrib/witte/ccm_to_v5d,
+	/cvsroot/vis5d/vis5d/contrib/gemvis/gemvis.tar,
+	/cvsroot/vis5d/vis5d/contrib/grads/grads_2_vis5d,
+	/cvsroot/vis5d/vis5d/contrib/grib/grib5d: removed redundant files
+
+	* /cvsroot/vis5d/vis5d/contrib/witte/ccm_to_v5d,
+	/cvsroot/vis5d/vis5d/contrib/witte/ccm_to_v5d.c,
+	/cvsroot/vis5d/vis5d/contrib/witte/ccmheader,
+	/cvsroot/vis5d/vis5d/contrib/witte/ccrutil.h,
+	/cvsroot/vis5d/vis5d/contrib/witte/ccrutil.readme,
+	/cvsroot/vis5d/vis5d/contrib/witte/diffccr.c,
+	/cvsroot/vis5d/vis5d/contrib/witte/extrccr.c,
+	/cvsroot/vis5d/vis5d/contrib/witte/henk-note,
+	/cvsroot/vis5d/vis5d/contrib/witte/scanccr.c,
+	/cvsroot/vis5d/vis5d/contrib/witte/vec_to_map.c,
+	/cvsroot/vis5d/vis5d/contrib/witte/vectomap.readme: New file.
+
+	* /cvsroot/vis5d/vis5d/contrib/witte/ccm_to_v5d,
+	/cvsroot/vis5d/vis5d/contrib/witte/ccm_to_v5d.c,
+	/cvsroot/vis5d/vis5d/contrib/witte/ccmheader,
+	/cvsroot/vis5d/vis5d/contrib/witte/ccrutil.h,
+	/cvsroot/vis5d/vis5d/contrib/witte/ccrutil.readme,
+	/cvsroot/vis5d/vis5d/contrib/witte/diffccr.c,
+	/cvsroot/vis5d/vis5d/contrib/witte/extrccr.c,
+	/cvsroot/vis5d/vis5d/contrib/witte/henk-note,
+	/cvsroot/vis5d/vis5d/contrib/witte/scanccr.c,
+	/cvsroot/vis5d/vis5d/contrib/witte/vec_to_map.c,
+	/cvsroot/vis5d/vis5d/contrib/witte/vectomap.readme: Start of CVS
+	repository, importing initial version from Vis5d 5.2.6a
+	"autoconfiscated" version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/contrib/uw-meteor/vis_to_v5d.c,
+	/cvsroot/vis5d/vis5d/contrib/uw-meteor/viswrite_cray.f,
+	/cvsroot/vis5d/vis5d/contrib/uw-meteor/viswrite_unix.f,
+	/cvsroot/vis5d/vis5d/contrib/witte/Make_ccrutil,
+	/cvsroot/vis5d/vis5d/contrib/witte/Make_map,
+	/cvsroot/vis5d/vis5d/contrib/witte/Make_tov5d: New file.
+
+	* /cvsroot/vis5d/vis5d/contrib/uw-meteor/vis_to_v5d.c,
+	/cvsroot/vis5d/vis5d/contrib/uw-meteor/viswrite_cray.f,
+	/cvsroot/vis5d/vis5d/contrib/uw-meteor/viswrite_unix.f,
+	/cvsroot/vis5d/vis5d/contrib/witte/Make_ccrutil,
+	/cvsroot/vis5d/vis5d/contrib/witte/Make_map,
+	/cvsroot/vis5d/vis5d/contrib/witte/Make_tov5d: Start of CVS
+	repository, importing initial version from Vis5d 5.2.6a
+	"autoconfiscated" version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/contrib/grib/grib5d,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/assign5.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/buffer.h,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/bword.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/dyofyr.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/exbits.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/fetch5.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/grib5d.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/gribinfo.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/gribinfo.h,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/grid5d.h,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/gridproj.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/gsdate.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/hrzintp5.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/ktypes.h,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/locate5.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/lscale.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/open5d.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/set_sign.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/sort5.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/unpack5.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/vfetch5.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/vhrzint5.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/vrtintp5.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/vsort5.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/vvrtint5.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/w3fb00.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/w3fc02.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/w3ft01.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/want.h,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/windcon.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/winds.h,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/write5d.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/x9ie32.c,
+	/cvsroot/vis5d/vis5d/contrib/hdftovis/HDFCONV.DOC,
+	/cvsroot/vis5d/vis5d/contrib/hdftovis/README.HDF,
+	/cvsroot/vis5d/vis5d/contrib/hdftovis/args.c,
+	/cvsroot/vis5d/vis5d/contrib/hdftovis/compal.c,
+	/cvsroot/vis5d/vis5d/contrib/hdftovis/hdftovis.F,
+	/cvsroot/vis5d/vis5d/contrib/hdftovis/hdftovis.m,
+	/cvsroot/vis5d/vis5d/contrib/uw-meteor/Makefile,
+	/cvsroot/vis5d/vis5d/contrib/uw-meteor/README,
+	/cvsroot/vis5d/vis5d/contrib/uw-meteor/driver.f: New file.
+
+	* /cvsroot/vis5d/vis5d/contrib/grib/grib5d,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/assign5.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/buffer.h,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/bword.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/dyofyr.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/exbits.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/fetch5.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/grib5d.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/gribinfo.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/gribinfo.h,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/grid5d.h,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/gridproj.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/gsdate.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/hrzintp5.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/ktypes.h,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/locate5.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/lscale.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/open5d.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/set_sign.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/sort5.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/unpack5.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/vfetch5.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/vhrzint5.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/vrtintp5.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/vsort5.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/vvrtint5.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/w3fb00.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/w3fc02.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/w3ft01.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/want.h,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/windcon.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/winds.h,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/write5d.c,
+	/cvsroot/vis5d/vis5d/contrib/grib/src/x9ie32.c,
+	/cvsroot/vis5d/vis5d/contrib/hdftovis/HDFCONV.DOC,
+	/cvsroot/vis5d/vis5d/contrib/hdftovis/README.HDF,
+	/cvsroot/vis5d/vis5d/contrib/hdftovis/args.c,
+	/cvsroot/vis5d/vis5d/contrib/hdftovis/compal.c,
+	/cvsroot/vis5d/vis5d/contrib/hdftovis/hdftovis.F,
+	/cvsroot/vis5d/vis5d/contrib/hdftovis/hdftovis.m,
+	/cvsroot/vis5d/vis5d/contrib/uw-meteor/Makefile,
+	/cvsroot/vis5d/vis5d/contrib/uw-meteor/README,
+	/cvsroot/vis5d/vis5d/contrib/uw-meteor/driver.f: Start of CVS
+	repository, importing initial version from Vis5d 5.2.6a
+	"autoconfiscated" version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/contrib/grib/README.V5D: New file.
+
+	* /cvsroot/vis5d/vis5d/contrib/grib/README.V5D: Start of CVS
+	repository, importing initial version from Vis5d 5.2.6a
+	"autoconfiscated" version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/contrib/grads/grads_2_vis5d,
+	/cvsroot/vis5d/vis5d/contrib/grads/grads_2_vis5d.f,
+	/cvsroot/vis5d/vis5d/contrib/grads/j.ctl,
+	/cvsroot/vis5d/vis5d/contrib/grib/Makefile: New file.
+
+	* /cvsroot/vis5d/vis5d/contrib/grads/grads_2_vis5d,
+	/cvsroot/vis5d/vis5d/contrib/grads/grads_2_vis5d.f,
+	/cvsroot/vis5d/vis5d/contrib/grads/j.ctl,
+	/cvsroot/vis5d/vis5d/contrib/grib/Makefile: Start of CVS
+	repository, importing initial version from Vis5d 5.2.6a
+	"autoconfiscated" version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/contrib/gemvis/source/cyctim.f,
+	/cvsroot/vis5d/vis5d/contrib/gemvis/source/encdec.f,
+	/cvsroot/vis5d/vis5d/contrib/gemvis/source/gdttim.f,
+	/cvsroot/vis5d/vis5d/contrib/gemvis/source/gemvis.err,
+	/cvsroot/vis5d/vis5d/contrib/gemvis/source/gemvis.f,
+	/cvsroot/vis5d/vis5d/contrib/gemvis/source/gemvis.pdf,
+	/cvsroot/vis5d/vis5d/contrib/gemvis/source/getusr.f,
+	/cvsroot/vis5d/vis5d/contrib/gemvis/source/intdat.f,
+	/cvsroot/vis5d/vis5d/contrib/gemvis/source/julday.f,
+	/cvsroot/vis5d/vis5d/contrib/gemvis/source/link_hp,
+	/cvsroot/vis5d/vis5d/contrib/gemvis/source/link_sg,
+	/cvsroot/vis5d/vis5d/contrib/gemvis/source/main.f,
+	/cvsroot/vis5d/vis5d/contrib/gemvis/source/opnvfy.f,
+	/cvsroot/vis5d/vis5d/contrib/gemvis/source/prshgt.f,
+	/cvsroot/vis5d/vis5d/contrib/gemvis/source/setlvs.f,
+	/cvsroot/vis5d/vis5d/contrib/gemvis/source/setpnt.f,
+	/cvsroot/vis5d/vis5d/contrib/gemvis/source/usrinp.f,
+	/cvsroot/vis5d/vis5d/contrib/grads/grads.m: New file.
+
+	* /cvsroot/vis5d/vis5d/contrib/gemvis/source/cyctim.f,
+	/cvsroot/vis5d/vis5d/contrib/gemvis/source/encdec.f,
+	/cvsroot/vis5d/vis5d/contrib/gemvis/source/gdttim.f,
+	/cvsroot/vis5d/vis5d/contrib/gemvis/source/gemvis.err,
+	/cvsroot/vis5d/vis5d/contrib/gemvis/source/gemvis.f,
+	/cvsroot/vis5d/vis5d/contrib/gemvis/source/gemvis.pdf,
+	/cvsroot/vis5d/vis5d/contrib/gemvis/source/getusr.f,
+	/cvsroot/vis5d/vis5d/contrib/gemvis/source/intdat.f,
+	/cvsroot/vis5d/vis5d/contrib/gemvis/source/julday.f,
+	/cvsroot/vis5d/vis5d/contrib/gemvis/source/link_hp,
+	/cvsroot/vis5d/vis5d/contrib/gemvis/source/link_sg,
+	/cvsroot/vis5d/vis5d/contrib/gemvis/source/main.f,
+	/cvsroot/vis5d/vis5d/contrib/gemvis/source/opnvfy.f,
+	/cvsroot/vis5d/vis5d/contrib/gemvis/source/prshgt.f,
+	/cvsroot/vis5d/vis5d/contrib/gemvis/source/setlvs.f,
+	/cvsroot/vis5d/vis5d/contrib/gemvis/source/setpnt.f,
+	/cvsroot/vis5d/vis5d/contrib/gemvis/source/usrinp.f,
+	/cvsroot/vis5d/vis5d/contrib/grads/grads.m: Start of CVS
+	repository, importing initial version from Vis5d 5.2.6a
+	"autoconfiscated" version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/contrib/gemvis/gemvis.tar,
+	/cvsroot/vis5d/vis5d/contrib/gemvis/source/chklav.f: New file.
+
+	* /cvsroot/vis5d/vis5d/contrib/gemvis/gemvis.tar,
+	/cvsroot/vis5d/vis5d/contrib/gemvis/source/chklav.f: Start of CVS
+	repository, importing initial version from Vis5d 5.2.6a
+	"autoconfiscated" version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/contrib/SimonBaas/README,
+	/cvsroot/vis5d/vis5d/contrib/SimonBaas/README2: New file.
+
+	* /cvsroot/vis5d/vis5d/contrib/SimonBaas/README,
+	/cvsroot/vis5d/vis5d/contrib/SimonBaas/README2: Start of CVS
+	repository, importing initial version from Vis5d 5.2.6a
+	"autoconfiscated" version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/contrib/CONTENTS,
+	/cvsroot/vis5d/vis5d/import/Makefile.am,
+	/cvsroot/vis5d/vis5d/import/Makefile.in,
+	/cvsroot/vis5d/vis5d/import/uam.c,
+	/cvsroot/vis5d/vis5d/import/uam_i.c,
+	/cvsroot/vis5d/vis5d/import/ui.c,
+	/cvsroot/vis5d/vis5d/import/ui.h,
+	/cvsroot/vis5d/vis5d/import/ui_i.c,
+	/cvsroot/vis5d/vis5d/import/ui_i.h: New file.
+
+	* /cvsroot/vis5d/vis5d/contrib/CONTENTS,
+	/cvsroot/vis5d/vis5d/import/Makefile.am,
+	/cvsroot/vis5d/vis5d/import/Makefile.in,
+	/cvsroot/vis5d/vis5d/import/uam.c,
+	/cvsroot/vis5d/vis5d/import/uam_i.c,
+	/cvsroot/vis5d/vis5d/import/ui.c,
+	/cvsroot/vis5d/vis5d/import/ui.h,
+	/cvsroot/vis5d/vis5d/import/ui_i.c,
+	/cvsroot/vis5d/vis5d/import/ui_i.h: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/import/resample_i.c,
+	/cvsroot/vis5d/vis5d/import/resample_i.h,
+	/cvsroot/vis5d/vis5d/import/rom.c,
+	/cvsroot/vis5d/vis5d/import/rom_i.c,
+	/cvsroot/vis5d/vis5d/import/select.c,
+	/cvsroot/vis5d/vis5d/import/select.h,
+	/cvsroot/vis5d/vis5d/import/select_i.c,
+	/cvsroot/vis5d/vis5d/import/select_i.h,
+	/cvsroot/vis5d/vis5d/import/tokenize.c,
+	/cvsroot/vis5d/vis5d/import/tokenize.h,
+	/cvsroot/vis5d/vis5d/import/tokenize_i.c,
+	/cvsroot/vis5d/vis5d/import/tokenize_i.h,
+	/cvsroot/vis5d/vis5d/import/topo.c,
+	/cvsroot/vis5d/vis5d/import/topo.h,
+	/cvsroot/vis5d/vis5d/import/topo_i.c,
+	/cvsroot/vis5d/vis5d/import/topo_i.h: New file.
+
+	* /cvsroot/vis5d/vis5d/import/resample_i.c,
+	/cvsroot/vis5d/vis5d/import/resample_i.h,
+	/cvsroot/vis5d/vis5d/import/rom.c,
+	/cvsroot/vis5d/vis5d/import/rom_i.c,
+	/cvsroot/vis5d/vis5d/import/select.c,
+	/cvsroot/vis5d/vis5d/import/select.h,
+	/cvsroot/vis5d/vis5d/import/select_i.c,
+	/cvsroot/vis5d/vis5d/import/select_i.h,
+	/cvsroot/vis5d/vis5d/import/tokenize.c,
+	/cvsroot/vis5d/vis5d/import/tokenize.h,
+	/cvsroot/vis5d/vis5d/import/tokenize_i.c,
+	/cvsroot/vis5d/vis5d/import/tokenize_i.h,
+	/cvsroot/vis5d/vis5d/import/topo.c,
+	/cvsroot/vis5d/vis5d/import/topo.h,
+	/cvsroot/vis5d/vis5d/import/topo_i.c,
+	/cvsroot/vis5d/vis5d/import/topo_i.h: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/import/read_epa_i.c,
+	/cvsroot/vis5d/vis5d/import/read_epa_i.h,
+	/cvsroot/vis5d/vis5d/import/read_gr3d.c,
+	/cvsroot/vis5d/vis5d/import/read_gr3d.h,
+	/cvsroot/vis5d/vis5d/import/read_gr3d_i.c,
+	/cvsroot/vis5d/vis5d/import/read_gr3d_i.h,
+	/cvsroot/vis5d/vis5d/import/read_grads.c,
+	/cvsroot/vis5d/vis5d/import/read_grads.h,
+	/cvsroot/vis5d/vis5d/import/read_grads_i.c,
+	/cvsroot/vis5d/vis5d/import/read_grads_i.h,
+	/cvsroot/vis5d/vis5d/import/read_grid.c,
+	/cvsroot/vis5d/vis5d/import/read_grid.h,
+	/cvsroot/vis5d/vis5d/import/read_grid_i.c,
+	/cvsroot/vis5d/vis5d/import/read_grid_i.h,
+	/cvsroot/vis5d/vis5d/import/read_uwvis.c,
+	/cvsroot/vis5d/vis5d/import/read_uwvis.h,
+	/cvsroot/vis5d/vis5d/import/read_uwvis_i.c,
+	/cvsroot/vis5d/vis5d/import/read_uwvis_i.h,
+	/cvsroot/vis5d/vis5d/import/read_v5d.c,
+	/cvsroot/vis5d/vis5d/import/read_v5d.h,
+	/cvsroot/vis5d/vis5d/import/read_v5d_i.c,
+	/cvsroot/vis5d/vis5d/import/read_v5d_i.h,
+	/cvsroot/vis5d/vis5d/import/resample.c,
+	/cvsroot/vis5d/vis5d/import/resample.h: New file.
+
+	* /cvsroot/vis5d/vis5d/import/read_epa_i.c,
+	/cvsroot/vis5d/vis5d/import/read_epa_i.h,
+	/cvsroot/vis5d/vis5d/import/read_gr3d.c,
+	/cvsroot/vis5d/vis5d/import/read_gr3d.h,
+	/cvsroot/vis5d/vis5d/import/read_gr3d_i.c,
+	/cvsroot/vis5d/vis5d/import/read_gr3d_i.h,
+	/cvsroot/vis5d/vis5d/import/read_grads.c,
+	/cvsroot/vis5d/vis5d/import/read_grads.h,
+	/cvsroot/vis5d/vis5d/import/read_grads_i.c,
+	/cvsroot/vis5d/vis5d/import/read_grads_i.h,
+	/cvsroot/vis5d/vis5d/import/read_grid.c,
+	/cvsroot/vis5d/vis5d/import/read_grid.h,
+	/cvsroot/vis5d/vis5d/import/read_grid_i.c,
+	/cvsroot/vis5d/vis5d/import/read_grid_i.h,
+	/cvsroot/vis5d/vis5d/import/read_uwvis.c,
+	/cvsroot/vis5d/vis5d/import/read_uwvis.h,
+	/cvsroot/vis5d/vis5d/import/read_uwvis_i.c,
+	/cvsroot/vis5d/vis5d/import/read_uwvis_i.h,
+	/cvsroot/vis5d/vis5d/import/read_v5d.c,
+	/cvsroot/vis5d/vis5d/import/read_v5d.h,
+	/cvsroot/vis5d/vis5d/import/read_v5d_i.c,
+	/cvsroot/vis5d/vis5d/import/read_v5d_i.h,
+	/cvsroot/vis5d/vis5d/import/resample.c,
+	/cvsroot/vis5d/vis5d/import/resample.h: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/import/projlist_i.c,
+	/cvsroot/vis5d/vis5d/import/projlist_i.h,
+	/cvsroot/vis5d/vis5d/import/radm.c,
+	/cvsroot/vis5d/vis5d/import/radm_emis.c,
+	/cvsroot/vis5d/vis5d/import/radm_emis_i.c,
+	/cvsroot/vis5d/vis5d/import/radm_i.c,
+	/cvsroot/vis5d/vis5d/import/read_epa.c,
+	/cvsroot/vis5d/vis5d/import/read_epa.h: New file.
+
+	* /cvsroot/vis5d/vis5d/import/projlist_i.c,
+	/cvsroot/vis5d/vis5d/import/projlist_i.h,
+	/cvsroot/vis5d/vis5d/import/radm.c,
+	/cvsroot/vis5d/vis5d/import/radm_emis.c,
+	/cvsroot/vis5d/vis5d/import/radm_emis_i.c,
+	/cvsroot/vis5d/vis5d/import/radm_i.c,
+	/cvsroot/vis5d/vis5d/import/read_epa.c,
+	/cvsroot/vis5d/vis5d/import/read_epa.h: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/import/output.c,
+	/cvsroot/vis5d/vis5d/import/output.h,
+	/cvsroot/vis5d/vis5d/import/outputold.c,
+	/cvsroot/vis5d/vis5d/import/proj.c,
+	/cvsroot/vis5d/vis5d/import/proj.h,
+	/cvsroot/vis5d/vis5d/import/proj2.c,
+	/cvsroot/vis5d/vis5d/import/proj2_i.c,
+	/cvsroot/vis5d/vis5d/import/proj_i.c,
+	/cvsroot/vis5d/vis5d/import/proj_i.h,
+	/cvsroot/vis5d/vis5d/import/projlist.c,
+	/cvsroot/vis5d/vis5d/import/projlist.h: New file.
+
+	* /cvsroot/vis5d/vis5d/import/output.c,
+	/cvsroot/vis5d/vis5d/import/output.h,
+	/cvsroot/vis5d/vis5d/import/outputold.c,
+	/cvsroot/vis5d/vis5d/import/proj.c,
+	/cvsroot/vis5d/vis5d/import/proj.h,
+	/cvsroot/vis5d/vis5d/import/proj2.c,
+	/cvsroot/vis5d/vis5d/import/proj2_i.c,
+	/cvsroot/vis5d/vis5d/import/proj_i.c,
+	/cvsroot/vis5d/vis5d/import/proj_i.h,
+	/cvsroot/vis5d/vis5d/import/projlist.c,
+	/cvsroot/vis5d/vis5d/import/projlist.h: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/import/gui.c,
+	/cvsroot/vis5d/vis5d/import/gui.h,
+	/cvsroot/vis5d/vis5d/import/julian2std.c,
+	/cvsroot/vis5d/vis5d/import/kltwin.f,
+	/cvsroot/vis5d/vis5d/import/main.c,
+	/cvsroot/vis5d/vis5d/import/memory.c,
+	/cvsroot/vis5d/vis5d/import/memory.h,
+	/cvsroot/vis5d/vis5d/import/misc.c,
+	/cvsroot/vis5d/vis5d/import/misc.h,
+	/cvsroot/vis5d/vis5d/import/mm4.c,
+	/cvsroot/vis5d/vis5d/import/mm4date2std.c,
+	/cvsroot/vis5d/vis5d/import/model.c,
+	/cvsroot/vis5d/vis5d/import/model.h,
+	/cvsroot/vis5d/vis5d/import/netcdf.h,
+	/cvsroot/vis5d/vis5d/import/netcdf2julian.c: New file.
+
+	* /cvsroot/vis5d/vis5d/import/gui.c,
+	/cvsroot/vis5d/vis5d/import/gui.h,
+	/cvsroot/vis5d/vis5d/import/julian2std.c,
+	/cvsroot/vis5d/vis5d/import/kltwin.f,
+	/cvsroot/vis5d/vis5d/import/main.c,
+	/cvsroot/vis5d/vis5d/import/memory.c,
+	/cvsroot/vis5d/vis5d/import/memory.h,
+	/cvsroot/vis5d/vis5d/import/misc.c,
+	/cvsroot/vis5d/vis5d/import/misc.h,
+	/cvsroot/vis5d/vis5d/import/mm4.c,
+	/cvsroot/vis5d/vis5d/import/mm4date2std.c,
+	/cvsroot/vis5d/vis5d/import/model.c,
+	/cvsroot/vis5d/vis5d/import/model.h,
+	/cvsroot/vis5d/vis5d/import/netcdf.h,
+	/cvsroot/vis5d/vis5d/import/netcdf2julian.c: Start of CVS
+	repository, importing initial version from Vis5d 5.2.6a
+	"autoconfiscated" version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/import/analyze.c,
+	/cvsroot/vis5d/vis5d/import/analyze.h,
+	/cvsroot/vis5d/vis5d/import/areal.c,
+	/cvsroot/vis5d/vis5d/import/file.c,
+	/cvsroot/vis5d/vis5d/import/file.h,
+	/cvsroot/vis5d/vis5d/import/grid.c,
+	/cvsroot/vis5d/vis5d/import/grid.h: New file.
+
+	* /cvsroot/vis5d/vis5d/import/analyze.c,
+	/cvsroot/vis5d/vis5d/import/analyze.h,
+	/cvsroot/vis5d/vis5d/import/areal.c,
+	/cvsroot/vis5d/vis5d/import/file.c,
+	/cvsroot/vis5d/vis5d/import/file.h,
+	/cvsroot/vis5d/vis5d/import/grid.c,
+	/cvsroot/vis5d/vis5d/import/grid.h: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/convert/foo2_to_v5d.c,
+	/cvsroot/vis5d/vis5d/convert/foo2_to_v5d.c.m,
+	/cvsroot/vis5d/vis5d/convert/foo2_to_v5d.f,
+	/cvsroot/vis5d/vis5d/convert/foo2_to_v5d.f.m,
+	/cvsroot/vis5d/vis5d/convert/foo_to_gr3d.c,
+	/cvsroot/vis5d/vis5d/convert/foo_to_gr3d.c.m,
+	/cvsroot/vis5d/vis5d/convert/foo_to_v5d.c,
+	/cvsroot/vis5d/vis5d/convert/foo_to_v5d.c.m,
+	/cvsroot/vis5d/vis5d/convert/foo_to_v5d.f,
+	/cvsroot/vis5d/vis5d/convert/foo_to_v5d.f.m,
+	/cvsroot/vis5d/vis5d/convert/sample.c,
+	/cvsroot/vis5d/vis5d/convert/sample.c.m,
+	/cvsroot/vis5d/vis5d/convert/sample.f,
+	/cvsroot/vis5d/vis5d/convert/sample.f.m,
+	/cvsroot/vis5d/vis5d/convert/test.c,
+	/cvsroot/vis5d/vis5d/convert/test.m,
+	/cvsroot/vis5d/vis5d/import/README,
+	/cvsroot/vis5d/vis5d/import/alpha.c,
+	/cvsroot/vis5d/vis5d/userfuncs/README,
+	/cvsroot/vis5d/vis5d/userfuncs/example.f,
+	/cvsroot/vis5d/vis5d/userfuncs/externf,
+	/cvsroot/vis5d/vis5d/userfuncs/externf.m,
+	/cvsroot/vis5d/vis5d/userfuncs/externf_all,
+	/cvsroot/vis5d/vis5d/userfuncs/probe.f,
+	/cvsroot/vis5d/vis5d/userfuncs/spd3d.f,
+	/cvsroot/vis5d/vis5d/util/Makefile.am: New file.
+
+	* /cvsroot/vis5d/vis5d/convert/foo2_to_v5d.c,
+	/cvsroot/vis5d/vis5d/convert/foo2_to_v5d.c.m,
+	/cvsroot/vis5d/vis5d/convert/foo2_to_v5d.f,
+	/cvsroot/vis5d/vis5d/convert/foo2_to_v5d.f.m,
+	/cvsroot/vis5d/vis5d/convert/foo_to_gr3d.c,
+	/cvsroot/vis5d/vis5d/convert/foo_to_gr3d.c.m,
+	/cvsroot/vis5d/vis5d/convert/foo_to_v5d.c,
+	/cvsroot/vis5d/vis5d/convert/foo_to_v5d.c.m,
+	/cvsroot/vis5d/vis5d/convert/foo_to_v5d.f,
+	/cvsroot/vis5d/vis5d/convert/foo_to_v5d.f.m,
+	/cvsroot/vis5d/vis5d/convert/sample.c,
+	/cvsroot/vis5d/vis5d/convert/sample.c.m,
+	/cvsroot/vis5d/vis5d/convert/sample.f,
+	/cvsroot/vis5d/vis5d/convert/sample.f.m,
+	/cvsroot/vis5d/vis5d/convert/test.c,
+	/cvsroot/vis5d/vis5d/convert/test.m,
+	/cvsroot/vis5d/vis5d/import/README,
+	/cvsroot/vis5d/vis5d/import/alpha.c,
+	/cvsroot/vis5d/vis5d/userfuncs/README,
+	/cvsroot/vis5d/vis5d/userfuncs/example.f,
+	/cvsroot/vis5d/vis5d/userfuncs/externf,
+	/cvsroot/vis5d/vis5d/userfuncs/externf.m,
+	/cvsroot/vis5d/vis5d/userfuncs/externf_all,
+	/cvsroot/vis5d/vis5d/userfuncs/probe.f,
+	/cvsroot/vis5d/vis5d/userfuncs/spd3d.f,
+	/cvsroot/vis5d/vis5d/util/Makefile.am: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/util/Makefile.in,
+	/cvsroot/vis5d/vis5d/util/maketopo.c,
+	/cvsroot/vis5d/vis5d/util/mapfunc.f,
+	/cvsroot/vis5d/vis5d/util/newmap.c,
+	/cvsroot/vis5d/vis5d/util/outlgrid.c,
+	/cvsroot/vis5d/vis5d/util/sdest.f,
+	/cvsroot/vis5d/vis5d/util/topo.f,
+	/cvsroot/vis5d/vis5d/util/topoinfo.c,
+	/cvsroot/vis5d/vis5d/util/v5dappend.c,
+	/cvsroot/vis5d/vis5d/util/v5dedit.c,
+	/cvsroot/vis5d/vis5d/util/v5dinfo.c,
+	/cvsroot/vis5d/vis5d/util/v5dstats.c,
+	/cvsroot/vis5d/vis5d/util/vis5d.h,
+	/cvsroot/vis5d/vis5d/util/vis_to_v5d.c: New file.
+
+	* /cvsroot/vis5d/vis5d/util/Makefile.in,
+	/cvsroot/vis5d/vis5d/util/maketopo.c,
+	/cvsroot/vis5d/vis5d/util/mapfunc.f,
+	/cvsroot/vis5d/vis5d/util/newmap.c,
+	/cvsroot/vis5d/vis5d/util/outlgrid.c,
+	/cvsroot/vis5d/vis5d/util/sdest.f,
+	/cvsroot/vis5d/vis5d/util/topo.f,
+	/cvsroot/vis5d/vis5d/util/topoinfo.c,
+	/cvsroot/vis5d/vis5d/util/v5dappend.c,
+	/cvsroot/vis5d/vis5d/util/v5dedit.c,
+	/cvsroot/vis5d/vis5d/util/v5dinfo.c,
+	/cvsroot/vis5d/vis5d/util/v5dstats.c,
+	/cvsroot/vis5d/vis5d/util/vis5d.h,
+	/cvsroot/vis5d/vis5d/util/vis_to_v5d.c: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/util/fromxwd.c,
+	/cvsroot/vis5d/vis5d/util/get5d.f,
+	/cvsroot/vis5d/vis5d/util/gg3d.f,
+	/cvsroot/vis5d/vis5d/util/gr3d_to_v5d.f,
+	/cvsroot/vis5d/vis5d/util/help.c,
+	/cvsroot/vis5d/vis5d/util/igg3d.f,
+	/cvsroot/vis5d/vis5d/util/igmk3d.f,
+	/cvsroot/vis5d/vis5d/util/igu3d.f,
+	/cvsroot/vis5d/vis5d/util/kludge.f,
+	/cvsroot/vis5d/vis5d/util/listfonts.c,
+	/cvsroot/vis5d/vis5d/util/main.c,
+	/cvsroot/vis5d/vis5d/util/makemap.c: New file.
+
+	* /cvsroot/vis5d/vis5d/util/fromxwd.c,
+	/cvsroot/vis5d/vis5d/util/get5d.f,
+	/cvsroot/vis5d/vis5d/util/gg3d.f,
+	/cvsroot/vis5d/vis5d/util/gr3d_to_v5d.f,
+	/cvsroot/vis5d/vis5d/util/help.c,
+	/cvsroot/vis5d/vis5d/util/igg3d.f,
+	/cvsroot/vis5d/vis5d/util/igmk3d.f,
+	/cvsroot/vis5d/vis5d/util/igu3d.f,
+	/cvsroot/vis5d/vis5d/util/kludge.f,
+	/cvsroot/vis5d/vis5d/util/listfonts.c,
+	/cvsroot/vis5d/vis5d/util/main.c,
+	/cvsroot/vis5d/vis5d/util/makemap.c: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/sounding.c.old2,
+	/cvsroot/vis5d/vis5d/util/comp_to_v5d.c,
+	/cvsroot/vis5d/vis5d/util/doubt.f: New file.
+
+	* /cvsroot/vis5d/vis5d/src/sounding.c.old2,
+	/cvsroot/vis5d/vis5d/util/comp_to_v5d.c,
+	/cvsroot/vis5d/vis5d/util/doubt.f: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/OUTLUSAM,
+	/cvsroot/vis5d/vis5d/src/api-config.h.in,
+	/cvsroot/vis5d/vis5d/src/p: New file.
+
+	* /cvsroot/vis5d/vis5d/src/OUTLUSAM,
+	/cvsroot/vis5d/vis5d/src/api-config.h.in,
+	/cvsroot/vis5d/vis5d/src/p: Start of CVS repository, importing
+	initial version from Vis5d 5.2.6a "autoconfiscated" version of
+	Vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/EARTH.TOPO: New file.
+
+	* /cvsroot/vis5d/vis5d/src/EARTH.TOPO: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/OUTLSUPW: New file.
+
+	* /cvsroot/vis5d/vis5d/src/OUTLSUPW: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/Makefile.am,
+	/cvsroot/vis5d/vis5d/src/Makefile.in,
+	/cvsroot/vis5d/vis5d/src/ifdefs.out: New file.
+
+	* /cvsroot/vis5d/vis5d/src/Makefile.am,
+	/cvsroot/vis5d/vis5d/src/Makefile.in,
+	/cvsroot/vis5d/vis5d/src/ifdefs.out: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/work.c,
+	/cvsroot/vis5d/vis5d/src/work.h, /cvsroot/vis5d/vis5d/src/xdump.c,
+	/cvsroot/vis5d/vis5d/src/xdump.h: New file.
+
+	* /cvsroot/vis5d/vis5d/src/work.c,
+	/cvsroot/vis5d/vis5d/src/work.h, /cvsroot/vis5d/vis5d/src/xdump.c,
+	/cvsroot/vis5d/vis5d/src/xdump.h: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/volume.c,
+	/cvsroot/vis5d/vis5d/src/volume.h,
+	/cvsroot/vis5d/vis5d/src/vtmcP.c,
+	/cvsroot/vis5d/vis5d/src/vtmcP.h: New file.
+
+	* /cvsroot/vis5d/vis5d/src/volume.c,
+	/cvsroot/vis5d/vis5d/src/volume.h,
+	/cvsroot/vis5d/vis5d/src/vtmcP.c,
+	/cvsroot/vis5d/vis5d/src/vtmcP.h: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/v5d.c, /cvsroot/vis5d/vis5d/src/v5d.h,
+	/cvsroot/vis5d/vis5d/src/v5df.h,
+	/cvsroot/vis5d/vis5d/src/vertplot.c,
+	/cvsroot/vis5d/vis5d/src/vertplot.h,
+	/cvsroot/vis5d/vis5d/src/vis5d.h: New file.
+
+	* /cvsroot/vis5d/vis5d/src/v5d.c, /cvsroot/vis5d/vis5d/src/v5d.h,
+	/cvsroot/vis5d/vis5d/src/v5df.h,
+	/cvsroot/vis5d/vis5d/src/vertplot.c,
+	/cvsroot/vis5d/vis5d/src/vertplot.h,
+	/cvsroot/vis5d/vis5d/src/vis5d.h: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/traj.c,
+	/cvsroot/vis5d/vis5d/src/traj.h, /cvsroot/vis5d/vis5d/src/uam_i.c,
+	/cvsroot/vis5d/vis5d/src/ui_i.c, /cvsroot/vis5d/vis5d/src/ui_i.h,
+	/cvsroot/vis5d/vis5d/src/user_data.c,
+	/cvsroot/vis5d/vis5d/src/user_data.h,
+	/cvsroot/vis5d/vis5d/src/uvwwidget.c,
+	/cvsroot/vis5d/vis5d/src/uvwwidget.h: New file.
+
+	* /cvsroot/vis5d/vis5d/src/traj.c,
+	/cvsroot/vis5d/vis5d/src/traj.h, /cvsroot/vis5d/vis5d/src/uam_i.c,
+	/cvsroot/vis5d/vis5d/src/ui_i.c, /cvsroot/vis5d/vis5d/src/ui_i.h,
+	/cvsroot/vis5d/vis5d/src/user_data.c,
+	/cvsroot/vis5d/vis5d/src/user_data.h,
+	/cvsroot/vis5d/vis5d/src/uvwwidget.c,
+	/cvsroot/vis5d/vis5d/src/uvwwidget.h: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/tclsave.c,
+	/cvsroot/vis5d/vis5d/src/tclsave.h,
+	/cvsroot/vis5d/vis5d/src/textplot.c,
+	/cvsroot/vis5d/vis5d/src/textplot.h,
+	/cvsroot/vis5d/vis5d/src/tokenize_i.c,
+	/cvsroot/vis5d/vis5d/src/tokenize_i.h,
+	/cvsroot/vis5d/vis5d/src/topo.c, /cvsroot/vis5d/vis5d/src/topo.h,
+	/cvsroot/vis5d/vis5d/src/topo_i.c,
+	/cvsroot/vis5d/vis5d/src/topo_i.h: New file.
+
+	* /cvsroot/vis5d/vis5d/src/tclsave.c,
+	/cvsroot/vis5d/vis5d/src/tclsave.h,
+	/cvsroot/vis5d/vis5d/src/textplot.c,
+	/cvsroot/vis5d/vis5d/src/textplot.h,
+	/cvsroot/vis5d/vis5d/src/tokenize_i.c,
+	/cvsroot/vis5d/vis5d/src/tokenize_i.h,
+	/cvsroot/vis5d/vis5d/src/topo.c, /cvsroot/vis5d/vis5d/src/topo.h,
+	/cvsroot/vis5d/vis5d/src/topo_i.c,
+	/cvsroot/vis5d/vis5d/src/topo_i.h: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/sounding.c,
+	/cvsroot/vis5d/vis5d/src/sounding.h,
+	/cvsroot/vis5d/vis5d/src/soundingGUI.c,
+	/cvsroot/vis5d/vis5d/src/soundingGUI.h,
+	/cvsroot/vis5d/vis5d/src/stream.c,
+	/cvsroot/vis5d/vis5d/src/stream.h,
+	/cvsroot/vis5d/vis5d/src/sync.c, /cvsroot/vis5d/vis5d/src/sync.h:
+	New file.
+
+	* /cvsroot/vis5d/vis5d/src/sounding.c,
+	/cvsroot/vis5d/vis5d/src/sounding.h,
+	/cvsroot/vis5d/vis5d/src/soundingGUI.c,
+	/cvsroot/vis5d/vis5d/src/soundingGUI.h,
+	/cvsroot/vis5d/vis5d/src/stream.c,
+	/cvsroot/vis5d/vis5d/src/stream.h,
+	/cvsroot/vis5d/vis5d/src/sync.c, /cvsroot/vis5d/vis5d/src/sync.h:
+	Start of CVS repository, importing initial version from Vis5d
+	5.2.6a "autoconfiscated" version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/slice.c,
+	/cvsroot/vis5d/vis5d/src/slice.h,
+	/cvsroot/vis5d/vis5d/src/socketio.c,
+	/cvsroot/vis5d/vis5d/src/socketio.h: New file.
+
+	* /cvsroot/vis5d/vis5d/src/slice.c,
+	/cvsroot/vis5d/vis5d/src/slice.h,
+	/cvsroot/vis5d/vis5d/src/socketio.c,
+	/cvsroot/vis5d/vis5d/src/socketio.h: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/script.c,
+	/cvsroot/vis5d/vis5d/src/script.h,
+	/cvsroot/vis5d/vis5d/src/select_i.c,
+	/cvsroot/vis5d/vis5d/src/select_i.h: New file.
+
+	* /cvsroot/vis5d/vis5d/src/script.c,
+	/cvsroot/vis5d/vis5d/src/script.h,
+	/cvsroot/vis5d/vis5d/src/select_i.c,
+	/cvsroot/vis5d/vis5d/src/select_i.h: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/save.h: New file.
+
+	* /cvsroot/vis5d/vis5d/src/save.h: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/rgbsliders.c,
+	/cvsroot/vis5d/vis5d/src/rgbsliders.h,
+	/cvsroot/vis5d/vis5d/src/rom_i.c, /cvsroot/vis5d/vis5d/src/save.c:
+	New file.
+
+	* /cvsroot/vis5d/vis5d/src/rgbsliders.c,
+	/cvsroot/vis5d/vis5d/src/rgbsliders.h,
+	/cvsroot/vis5d/vis5d/src/rom_i.c, /cvsroot/vis5d/vis5d/src/save.c:
+	Start of CVS repository, importing initial version from Vis5d
+	5.2.6a "autoconfiscated" version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/render.c,
+	/cvsroot/vis5d/vis5d/src/render.h,
+	/cvsroot/vis5d/vis5d/src/resample_i.c,
+	/cvsroot/vis5d/vis5d/src/resample_i.h,
+	/cvsroot/vis5d/vis5d/src/rgb.c, /cvsroot/vis5d/vis5d/src/rgb.h:
+	New file.
+
+	* /cvsroot/vis5d/vis5d/src/render.c,
+	/cvsroot/vis5d/vis5d/src/render.h,
+	/cvsroot/vis5d/vis5d/src/resample_i.c,
+	/cvsroot/vis5d/vis5d/src/resample_i.h,
+	/cvsroot/vis5d/vis5d/src/rgb.c, /cvsroot/vis5d/vis5d/src/rgb.h:
+	Start of CVS repository, importing initial version from Vis5d
+	5.2.6a "autoconfiscated" version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/radm_i.c,
+	/cvsroot/vis5d/vis5d/src/read_epa_i.c,
+	/cvsroot/vis5d/vis5d/src/read_epa_i.h,
+	/cvsroot/vis5d/vis5d/src/read_gr3d_i.c,
+	/cvsroot/vis5d/vis5d/src/read_gr3d_i.h,
+	/cvsroot/vis5d/vis5d/src/read_grads_i.c,
+	/cvsroot/vis5d/vis5d/src/read_grads_i.h,
+	/cvsroot/vis5d/vis5d/src/read_grid_i.c,
+	/cvsroot/vis5d/vis5d/src/read_grid_i.h,
+	/cvsroot/vis5d/vis5d/src/read_uwvis_i.c,
+	/cvsroot/vis5d/vis5d/src/read_uwvis_i.h,
+	/cvsroot/vis5d/vis5d/src/read_v5d_i.c,
+	/cvsroot/vis5d/vis5d/src/read_v5d_i.h,
+	/cvsroot/vis5d/vis5d/src/record.c,
+	/cvsroot/vis5d/vis5d/src/record.h: New file.
+
+	* /cvsroot/vis5d/vis5d/src/radm_i.c,
+	/cvsroot/vis5d/vis5d/src/read_epa_i.c,
+	/cvsroot/vis5d/vis5d/src/read_epa_i.h,
+	/cvsroot/vis5d/vis5d/src/read_gr3d_i.c,
+	/cvsroot/vis5d/vis5d/src/read_gr3d_i.h,
+	/cvsroot/vis5d/vis5d/src/read_grads_i.c,
+	/cvsroot/vis5d/vis5d/src/read_grads_i.h,
+	/cvsroot/vis5d/vis5d/src/read_grid_i.c,
+	/cvsroot/vis5d/vis5d/src/read_grid_i.h,
+	/cvsroot/vis5d/vis5d/src/read_uwvis_i.c,
+	/cvsroot/vis5d/vis5d/src/read_uwvis_i.h,
+	/cvsroot/vis5d/vis5d/src/read_v5d_i.c,
+	/cvsroot/vis5d/vis5d/src/read_v5d_i.h,
+	/cvsroot/vis5d/vis5d/src/record.c,
+	/cvsroot/vis5d/vis5d/src/record.h: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/proj.c,
+	/cvsroot/vis5d/vis5d/src/proj.h,
+	/cvsroot/vis5d/vis5d/src/proj2_i.c,
+	/cvsroot/vis5d/vis5d/src/proj_i.c,
+	/cvsroot/vis5d/vis5d/src/proj_i.h,
+	/cvsroot/vis5d/vis5d/src/projlist_i.c,
+	/cvsroot/vis5d/vis5d/src/projlist_i.h,
+	/cvsroot/vis5d/vis5d/src/queue.c,
+	/cvsroot/vis5d/vis5d/src/queue.h,
+	/cvsroot/vis5d/vis5d/src/radm_emis_i.c: New file.
+
+	* /cvsroot/vis5d/vis5d/src/proj.c,
+	/cvsroot/vis5d/vis5d/src/proj.h,
+	/cvsroot/vis5d/vis5d/src/proj2_i.c,
+	/cvsroot/vis5d/vis5d/src/proj_i.c,
+	/cvsroot/vis5d/vis5d/src/proj_i.h,
+	/cvsroot/vis5d/vis5d/src/projlist_i.c,
+	/cvsroot/vis5d/vis5d/src/projlist_i.h,
+	/cvsroot/vis5d/vis5d/src/queue.c,
+	/cvsroot/vis5d/vis5d/src/queue.h,
+	/cvsroot/vis5d/vis5d/src/radm_emis_i.c: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/netcdf.h,
+	/cvsroot/vis5d/vis5d/src/netcdf2julian_i.c,
+	/cvsroot/vis5d/vis5d/src/netcdf_i.h,
+	/cvsroot/vis5d/vis5d/src/newproj.c,
+	/cvsroot/vis5d/vis5d/src/oldrecord.c,
+	/cvsroot/vis5d/vis5d/src/output_i.c,
+	/cvsroot/vis5d/vis5d/src/output_i.h,
+	/cvsroot/vis5d/vis5d/src/own.c, /cvsroot/vis5d/vis5d/src/pi.c,
+	/cvsroot/vis5d/vis5d/src/pipe.c, /cvsroot/vis5d/vis5d/src/pipe.h:
+	New file.
+
+	* /cvsroot/vis5d/vis5d/src/netcdf.h,
+	/cvsroot/vis5d/vis5d/src/netcdf2julian_i.c,
+	/cvsroot/vis5d/vis5d/src/netcdf_i.h,
+	/cvsroot/vis5d/vis5d/src/newproj.c,
+	/cvsroot/vis5d/vis5d/src/oldrecord.c,
+	/cvsroot/vis5d/vis5d/src/output_i.c,
+	/cvsroot/vis5d/vis5d/src/output_i.h,
+	/cvsroot/vis5d/vis5d/src/own.c, /cvsroot/vis5d/vis5d/src/pi.c,
+	/cvsroot/vis5d/vis5d/src/pipe.c, /cvsroot/vis5d/vis5d/src/pipe.h:
+	Start of CVS repository, importing initial version from Vis5d
+	5.2.6a "autoconfiscated" version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/misc.c,
+	/cvsroot/vis5d/vis5d/src/misc.h,
+	/cvsroot/vis5d/vis5d/src/misc_i.c,
+	/cvsroot/vis5d/vis5d/src/misc_i.h,
+	/cvsroot/vis5d/vis5d/src/mm4_i.c,
+	/cvsroot/vis5d/vis5d/src/mm4date2std_i.c,
+	/cvsroot/vis5d/vis5d/src/model_i.c,
+	/cvsroot/vis5d/vis5d/src/model_i.h,
+	/cvsroot/vis5d/vis5d/src/mwmborder.c,
+	/cvsroot/vis5d/vis5d/src/mwmborder.h: New file.
+
+	* /cvsroot/vis5d/vis5d/src/misc.c,
+	/cvsroot/vis5d/vis5d/src/misc.h,
+	/cvsroot/vis5d/vis5d/src/misc_i.c,
+	/cvsroot/vis5d/vis5d/src/misc_i.h,
+	/cvsroot/vis5d/vis5d/src/mm4_i.c,
+	/cvsroot/vis5d/vis5d/src/mm4date2std_i.c,
+	/cvsroot/vis5d/vis5d/src/model_i.c,
+	/cvsroot/vis5d/vis5d/src/model_i.h,
+	/cvsroot/vis5d/vis5d/src/mwmborder.c,
+	/cvsroot/vis5d/vis5d/src/mwmborder.h: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/main.c,
+	/cvsroot/vis5d/vis5d/src/main_i.c,
+	/cvsroot/vis5d/vis5d/src/main_i.h, /cvsroot/vis5d/vis5d/src/map.c,
+	/cvsroot/vis5d/vis5d/src/map.h, /cvsroot/vis5d/vis5d/src/matrix.c,
+	/cvsroot/vis5d/vis5d/src/matrix.h,
+	/cvsroot/vis5d/vis5d/src/memory.c,
+	/cvsroot/vis5d/vis5d/src/memory.h,
+	/cvsroot/vis5d/vis5d/src/memory_i.c,
+	/cvsroot/vis5d/vis5d/src/memory_i.h: New file.
+
+	* /cvsroot/vis5d/vis5d/src/main.c,
+	/cvsroot/vis5d/vis5d/src/main_i.c,
+	/cvsroot/vis5d/vis5d/src/main_i.h, /cvsroot/vis5d/vis5d/src/map.c,
+	/cvsroot/vis5d/vis5d/src/map.h, /cvsroot/vis5d/vis5d/src/matrix.c,
+	/cvsroot/vis5d/vis5d/src/matrix.h,
+	/cvsroot/vis5d/vis5d/src/memory.c,
+	/cvsroot/vis5d/vis5d/src/memory.h,
+	/cvsroot/vis5d/vis5d/src/memory_i.c,
+	/cvsroot/vis5d/vis5d/src/memory_i.h: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/isocolor.c,
+	/cvsroot/vis5d/vis5d/src/isocolor.h,
+	/cvsroot/vis5d/vis5d/src/julian2std_i.c,
+	/cvsroot/vis5d/vis5d/src/kltwin.f,
+	/cvsroot/vis5d/vis5d/src/labels.c,
+	/cvsroot/vis5d/vis5d/src/labels.h,
+	/cvsroot/vis5d/vis5d/src/linterp.c,
+	/cvsroot/vis5d/vis5d/src/linterp.h: New file.
+
+	* /cvsroot/vis5d/vis5d/src/isocolor.c,
+	/cvsroot/vis5d/vis5d/src/isocolor.h,
+	/cvsroot/vis5d/vis5d/src/julian2std_i.c,
+	/cvsroot/vis5d/vis5d/src/kltwin.f,
+	/cvsroot/vis5d/vis5d/src/labels.c,
+	/cvsroot/vis5d/vis5d/src/labels.h,
+	/cvsroot/vis5d/vis5d/src/linterp.c,
+	/cvsroot/vis5d/vis5d/src/linterp.h: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/imain.c,
+	/cvsroot/vis5d/vis5d/src/imain.h,
+	/cvsroot/vis5d/vis5d/src/imemory.c,
+	/cvsroot/vis5d/vis5d/src/imemory.h,
+	/cvsroot/vis5d/vis5d/src/irregular_api.c,
+	/cvsroot/vis5d/vis5d/src/irregular_api.h,
+	/cvsroot/vis5d/vis5d/src/irregular_v5d.c,
+	/cvsroot/vis5d/vis5d/src/irregular_v5d.h: New file.
+
+	* /cvsroot/vis5d/vis5d/src/imain.c,
+	/cvsroot/vis5d/vis5d/src/imain.h,
+	/cvsroot/vis5d/vis5d/src/imemory.c,
+	/cvsroot/vis5d/vis5d/src/imemory.h,
+	/cvsroot/vis5d/vis5d/src/irregular_api.c,
+	/cvsroot/vis5d/vis5d/src/irregular_api.h,
+	/cvsroot/vis5d/vis5d/src/irregular_v5d.c,
+	/cvsroot/vis5d/vis5d/src/irregular_v5d.h: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/igrid.c,
+	/cvsroot/vis5d/vis5d/src/igui.c, /cvsroot/vis5d/vis5d/src/igui.h,
+	/cvsroot/vis5d/vis5d/src/image.c,
+	/cvsroot/vis5d/vis5d/src/image.h: New file.
+
+	* /cvsroot/vis5d/vis5d/src/igrid.c,
+	/cvsroot/vis5d/vis5d/src/igui.c, /cvsroot/vis5d/vis5d/src/igui.h,
+	/cvsroot/vis5d/vis5d/src/image.c,
+	/cvsroot/vis5d/vis5d/src/image.h: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/gui_i.c,
+	/cvsroot/vis5d/vis5d/src/gui_i.h, /cvsroot/vis5d/vis5d/src/iapi.c,
+	/cvsroot/vis5d/vis5d/src/iapi.h: New file.
+
+	* /cvsroot/vis5d/vis5d/src/gui_i.c,
+	/cvsroot/vis5d/vis5d/src/gui_i.h, /cvsroot/vis5d/vis5d/src/iapi.c,
+	/cvsroot/vis5d/vis5d/src/iapi.h: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/gui.c, /cvsroot/vis5d/vis5d/src/gui.h:
+	New file.
+
+	* /cvsroot/vis5d/vis5d/src/gui.c, /cvsroot/vis5d/vis5d/src/gui.h:
+	Start of CVS repository, importing initial version from Vis5d
+	5.2.6a "autoconfiscated" version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/grid.h,
+	/cvsroot/vis5d/vis5d/src/grid_i.c,
+	/cvsroot/vis5d/vis5d/src/grid_i.h,
+	/cvsroot/vis5d/vis5d/src/groupchrono.c,
+	/cvsroot/vis5d/vis5d/src/groupchrono.h: New file.
+
+	* /cvsroot/vis5d/vis5d/src/grid.h,
+	/cvsroot/vis5d/vis5d/src/grid_i.c,
+	/cvsroot/vis5d/vis5d/src/grid_i.h,
+	/cvsroot/vis5d/vis5d/src/groupchrono.c,
+	/cvsroot/vis5d/vis5d/src/groupchrono.h: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/graphics.ogl.c,
+	/cvsroot/vis5d/vis5d/src/graphics.pex.c,
+	/cvsroot/vis5d/vis5d/src/grid.c: New file.
+
+	* /cvsroot/vis5d/vis5d/src/graphics.ogl.c,
+	/cvsroot/vis5d/vis5d/src/graphics.pex.c,
+	/cvsroot/vis5d/vis5d/src/grid.c: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/graphics.gl.c,
+	/cvsroot/vis5d/vis5d/src/graphics.h: New file.
+
+	* /cvsroot/vis5d/vis5d/src/graphics.gl.c,
+	/cvsroot/vis5d/vis5d/src/graphics.h: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/g.pex.c,
+	/cvsroot/vis5d/vis5d/src/gl_to_ppm.c,
+	/cvsroot/vis5d/vis5d/src/gl_to_ppm.h,
+	/cvsroot/vis5d/vis5d/src/globals.c,
+	/cvsroot/vis5d/vis5d/src/globals.h,
+	/cvsroot/vis5d/vis5d/src/graphics.all.c: New file.
+
+	* /cvsroot/vis5d/vis5d/src/g.pex.c,
+	/cvsroot/vis5d/vis5d/src/gl_to_ppm.c,
+	/cvsroot/vis5d/vis5d/src/gl_to_ppm.h,
+	/cvsroot/vis5d/vis5d/src/globals.c,
+	/cvsroot/vis5d/vis5d/src/globals.h,
+	/cvsroot/vis5d/vis5d/src/graphics.all.c: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/file.c,
+	/cvsroot/vis5d/vis5d/src/file.h,
+	/cvsroot/vis5d/vis5d/src/file_i.c,
+	/cvsroot/vis5d/vis5d/src/file_i.h, /cvsroot/vis5d/vis5d/src/fsl.c,
+	/cvsroot/vis5d/vis5d/src/fsl.h: New file.
+
+	* /cvsroot/vis5d/vis5d/src/file.c,
+	/cvsroot/vis5d/vis5d/src/file.h,
+	/cvsroot/vis5d/vis5d/src/file_i.c,
+	/cvsroot/vis5d/vis5d/src/file_i.h, /cvsroot/vis5d/vis5d/src/fsl.c,
+	/cvsroot/vis5d/vis5d/src/fsl.h: Start of CVS repository, importing
+	initial version from Vis5d 5.2.6a "autoconfiscated" version of
+	Vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/etableP.h,
+	/cvsroot/vis5d/vis5d/src/extmain.c: New file.
+
+	* /cvsroot/vis5d/vis5d/src/etableP.h,
+	/cvsroot/vis5d/vis5d/src/extmain.c: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/contour.c,
+	/cvsroot/vis5d/vis5d/src/contour.h,
+	/cvsroot/vis5d/vis5d/src/cursor.c,
+	/cvsroot/vis5d/vis5d/src/cursor.h,
+	/cvsroot/vis5d/vis5d/src/displaywidget.c,
+	/cvsroot/vis5d/vis5d/src/displaywidget.h: New file.
+
+	* /cvsroot/vis5d/vis5d/src/contour.c,
+	/cvsroot/vis5d/vis5d/src/contour.h,
+	/cvsroot/vis5d/vis5d/src/cursor.c,
+	/cvsroot/vis5d/vis5d/src/cursor.h,
+	/cvsroot/vis5d/vis5d/src/displaywidget.c,
+	/cvsroot/vis5d/vis5d/src/displaywidget.h: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/binio.c,
+	/cvsroot/vis5d/vis5d/src/binio.h, /cvsroot/vis5d/vis5d/src/box.c,
+	/cvsroot/vis5d/vis5d/src/box.h, /cvsroot/vis5d/vis5d/src/cb.c,
+	/cvsroot/vis5d/vis5d/src/cb.h, /cvsroot/vis5d/vis5d/src/chrono.c,
+	/cvsroot/vis5d/vis5d/src/chrono.h,
+	/cvsroot/vis5d/vis5d/src/compute.c,
+	/cvsroot/vis5d/vis5d/src/compute.h: New file.
+
+	* /cvsroot/vis5d/vis5d/src/binio.c,
+	/cvsroot/vis5d/vis5d/src/binio.h, /cvsroot/vis5d/vis5d/src/box.c,
+	/cvsroot/vis5d/vis5d/src/box.h, /cvsroot/vis5d/vis5d/src/cb.c,
+	/cvsroot/vis5d/vis5d/src/cb.h, /cvsroot/vis5d/vis5d/src/chrono.c,
+	/cvsroot/vis5d/vis5d/src/chrono.h,
+	/cvsroot/vis5d/vis5d/src/compute.c,
+	/cvsroot/vis5d/vis5d/src/compute.h: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/src/api.c, /cvsroot/vis5d/vis5d/src/api.h,
+	/cvsroot/vis5d/vis5d/src/areal_i.c: New file.
+
+	* /cvsroot/vis5d/vis5d/src/api.c, /cvsroot/vis5d/vis5d/src/api.h,
+	/cvsroot/vis5d/vis5d/src/areal_i.c: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/lui5/Makefile.am,
+	/cvsroot/vis5d/vis5d/lui5/Makefile.in,
+	/cvsroot/vis5d/vis5d/lui5/README,
+	/cvsroot/vis5d/vis5d/lui5/newlist.c,
+	/cvsroot/vis5d/vis5d/lui5/newlist.h,
+	/cvsroot/vis5d/vis5d/lui5/newslider.c,
+	/cvsroot/vis5d/vis5d/lui5/newslider.h,
+	/cvsroot/vis5d/vis5d/lui5/pixmaps.c,
+	/cvsroot/vis5d/vis5d/lui5/pixmaps.h,
+	/cvsroot/vis5d/vis5d/lui5/popup.c,
+	/cvsroot/vis5d/vis5d/lui5/popup.h,
+	/cvsroot/vis5d/vis5d/lui5/radio.c,
+	/cvsroot/vis5d/vis5d/lui5/radio.h,
+	/cvsroot/vis5d/vis5d/lui5/scrollbar.c,
+	/cvsroot/vis5d/vis5d/lui5/scrollbar.h,
+	/cvsroot/vis5d/vis5d/src/alpha_i.c,
+	/cvsroot/vis5d/vis5d/src/analysis.c,
+	/cvsroot/vis5d/vis5d/src/analysis.h,
+	/cvsroot/vis5d/vis5d/src/analyze_i.c,
+	/cvsroot/vis5d/vis5d/src/analyze_i.h,
+	/cvsroot/vis5d/vis5d/src/anim.c, /cvsroot/vis5d/vis5d/src/anim.h:
+	New file.
+
+	* /cvsroot/vis5d/vis5d/lui5/Makefile.am,
+	/cvsroot/vis5d/vis5d/lui5/Makefile.in,
+	/cvsroot/vis5d/vis5d/lui5/README,
+	/cvsroot/vis5d/vis5d/lui5/newlist.c,
+	/cvsroot/vis5d/vis5d/lui5/newlist.h,
+	/cvsroot/vis5d/vis5d/lui5/newslider.c,
+	/cvsroot/vis5d/vis5d/lui5/newslider.h,
+	/cvsroot/vis5d/vis5d/lui5/pixmaps.c,
+	/cvsroot/vis5d/vis5d/lui5/pixmaps.h,
+	/cvsroot/vis5d/vis5d/lui5/popup.c,
+	/cvsroot/vis5d/vis5d/lui5/popup.h,
+	/cvsroot/vis5d/vis5d/lui5/radio.c,
+	/cvsroot/vis5d/vis5d/lui5/radio.h,
+	/cvsroot/vis5d/vis5d/lui5/scrollbar.c,
+	/cvsroot/vis5d/vis5d/lui5/scrollbar.h,
+	/cvsroot/vis5d/vis5d/src/alpha_i.c,
+	/cvsroot/vis5d/vis5d/src/analysis.c,
+	/cvsroot/vis5d/vis5d/src/analysis.h,
+	/cvsroot/vis5d/vis5d/src/analyze_i.c,
+	/cvsroot/vis5d/vis5d/src/analyze_i.h,
+	/cvsroot/vis5d/vis5d/src/anim.c, /cvsroot/vis5d/vis5d/src/anim.h:
+	Start of CVS repository, importing initial version from Vis5d
+	5.2.6a "autoconfiscated" version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/lui5/dialog.c,
+	/cvsroot/vis5d/vis5d/lui5/dialog.h,
+	/cvsroot/vis5d/vis5d/lui5/event.c,
+	/cvsroot/vis5d/vis5d/lui5/field.c,
+	/cvsroot/vis5d/vis5d/lui5/field.h,
+	/cvsroot/vis5d/vis5d/lui5/help.c,
+	/cvsroot/vis5d/vis5d/lui5/label.c,
+	/cvsroot/vis5d/vis5d/lui5/label.h,
+	/cvsroot/vis5d/vis5d/lui5/layout.c,
+	/cvsroot/vis5d/vis5d/lui5/layout.h,
+	/cvsroot/vis5d/vis5d/lui5/list.c,
+	/cvsroot/vis5d/vis5d/lui5/list.h, /cvsroot/vis5d/vis5d/lui5/lui.c,
+	/cvsroot/vis5d/vis5d/lui5/lui.h,
+	/cvsroot/vis5d/vis5d/lui5/newbrowser.c,
+	/cvsroot/vis5d/vis5d/lui5/newbrowser.h,
+	/cvsroot/vis5d/vis5d/lui5/newbutton.c,
+	/cvsroot/vis5d/vis5d/lui5/newbutton.h,
+	/cvsroot/vis5d/vis5d/lui5/newlabel.c,
+	/cvsroot/vis5d/vis5d/lui5/newlabel.h: New file.
+
+	* /cvsroot/vis5d/vis5d/lui5/dialog.c,
+	/cvsroot/vis5d/vis5d/lui5/dialog.h,
+	/cvsroot/vis5d/vis5d/lui5/event.c,
+	/cvsroot/vis5d/vis5d/lui5/field.c,
+	/cvsroot/vis5d/vis5d/lui5/field.h,
+	/cvsroot/vis5d/vis5d/lui5/help.c,
+	/cvsroot/vis5d/vis5d/lui5/label.c,
+	/cvsroot/vis5d/vis5d/lui5/label.h,
+	/cvsroot/vis5d/vis5d/lui5/layout.c,
+	/cvsroot/vis5d/vis5d/lui5/layout.h,
+	/cvsroot/vis5d/vis5d/lui5/list.c,
+	/cvsroot/vis5d/vis5d/lui5/list.h, /cvsroot/vis5d/vis5d/lui5/lui.c,
+	/cvsroot/vis5d/vis5d/lui5/lui.h,
+	/cvsroot/vis5d/vis5d/lui5/newbrowser.c,
+	/cvsroot/vis5d/vis5d/lui5/newbrowser.h,
+	/cvsroot/vis5d/vis5d/lui5/newbutton.c,
+	/cvsroot/vis5d/vis5d/lui5/newbutton.h,
+	/cvsroot/vis5d/vis5d/lui5/newlabel.c,
+	/cvsroot/vis5d/vis5d/lui5/newlabel.h: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/lui5/browser.c,
+	/cvsroot/vis5d/vis5d/lui5/browser.h,
+	/cvsroot/vis5d/vis5d/lui5/browser2.c,
+	/cvsroot/vis5d/vis5d/lui5/browser2.h,
+	/cvsroot/vis5d/vis5d/lui5/button.c,
+	/cvsroot/vis5d/vis5d/lui5/button.h,
+	/cvsroot/vis5d/vis5d/lui5/buttonmatrix.c,
+	/cvsroot/vis5d/vis5d/lui5/buttonmatrix.h,
+	/cvsroot/vis5d/vis5d/lui5/colorbar.c,
+	/cvsroot/vis5d/vis5d/lui5/colorbar.h,
+	/cvsroot/vis5d/vis5d/lui5/destroy.c,
+	/cvsroot/vis5d/vis5d/lui5/destroy.h,
+	/cvsroot/vis5d/vis5d/scripts/trajcol.tcl,
+	/cvsroot/vis5d/vis5d/scripts/trajcol2.tcl,
+	/cvsroot/vis5d/vis5d/scripts/wslice.tcl: New file.
+
+	* /cvsroot/vis5d/vis5d/lui5/browser.c,
+	/cvsroot/vis5d/vis5d/lui5/browser.h,
+	/cvsroot/vis5d/vis5d/lui5/browser2.c,
+	/cvsroot/vis5d/vis5d/lui5/browser2.h,
+	/cvsroot/vis5d/vis5d/lui5/button.c,
+	/cvsroot/vis5d/vis5d/lui5/button.h,
+	/cvsroot/vis5d/vis5d/lui5/buttonmatrix.c,
+	/cvsroot/vis5d/vis5d/lui5/buttonmatrix.h,
+	/cvsroot/vis5d/vis5d/lui5/colorbar.c,
+	/cvsroot/vis5d/vis5d/lui5/colorbar.h,
+	/cvsroot/vis5d/vis5d/lui5/destroy.c,
+	/cvsroot/vis5d/vis5d/lui5/destroy.h,
+	/cvsroot/vis5d/vis5d/scripts/trajcol.tcl,
+	/cvsroot/vis5d/vis5d/scripts/trajcol2.tcl,
+	/cvsroot/vis5d/vis5d/scripts/wslice.tcl: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/ChangeLog, /cvsroot/vis5d/vis5d/hole.v5d,
+	/cvsroot/vis5d/vis5d/scripts/clone.tcl,
+	/cvsroot/vis5d/vis5d/scripts/highwind.tcl,
+	/cvsroot/vis5d/vis5d/scripts/label.tcl,
+	/cvsroot/vis5d/vis5d/scripts/movie.tcl,
+	/cvsroot/vis5d/vis5d/scripts/movie2.tcl,
+	/cvsroot/vis5d/vis5d/scripts/spin.tcl: New file.
+
+	* /cvsroot/vis5d/vis5d/ChangeLog, /cvsroot/vis5d/vis5d/hole.v5d,
+	/cvsroot/vis5d/vis5d/scripts/clone.tcl,
+	/cvsroot/vis5d/vis5d/scripts/highwind.tcl,
+	/cvsroot/vis5d/vis5d/scripts/label.tcl,
+	/cvsroot/vis5d/vis5d/scripts/movie.tcl,
+	/cvsroot/vis5d/vis5d/scripts/movie2.tcl,
+	/cvsroot/vis5d/vis5d/scripts/spin.tcl: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+
+	* /cvsroot/vis5d/vis5d/AUTHORS, /cvsroot/vis5d/vis5d/COPYING,
+	/cvsroot/vis5d/vis5d/COPYRIGHT, /cvsroot/vis5d/vis5d/Makefile.am,
+	/cvsroot/vis5d/vis5d/Makefile.in, /cvsroot/vis5d/vis5d/NEWS,
+	/cvsroot/vis5d/vis5d/PORTING, /cvsroot/vis5d/vis5d/README,
+	/cvsroot/vis5d/vis5d/acconfig.h,
+	/cvsroot/vis5d/vis5d/acinclude.m4,
+	/cvsroot/vis5d/vis5d/configure.in: New file.
+
+	* /cvsroot/vis5d/vis5d/AUTHORS, /cvsroot/vis5d/vis5d/COPYING,
+	/cvsroot/vis5d/vis5d/COPYRIGHT, /cvsroot/vis5d/vis5d/Makefile.am,
+	/cvsroot/vis5d/vis5d/Makefile.in, /cvsroot/vis5d/vis5d/NEWS,
+	/cvsroot/vis5d/vis5d/PORTING, /cvsroot/vis5d/vis5d/README,
+	/cvsroot/vis5d/vis5d/acconfig.h,
+	/cvsroot/vis5d/vis5d/acinclude.m4,
+	/cvsroot/vis5d/vis5d/configure.in: Start of CVS repository,
+	importing initial version from Vis5d 5.2.6a "autoconfiscated"
+	version of Vis5d.
+

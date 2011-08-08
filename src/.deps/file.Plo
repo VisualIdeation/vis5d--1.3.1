@@ -1,0 +1,3 @@
+file.lo file.o: file.c ../config.h
+
+../config.h:

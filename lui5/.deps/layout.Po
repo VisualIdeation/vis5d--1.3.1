@@ -1,0 +1,3 @@
+layout.o layout.o: layout.c layout.h
+
+layout.h:

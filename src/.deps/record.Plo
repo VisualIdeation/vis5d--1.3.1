@@ -1,0 +1,3 @@
+record.lo record.o: record.c ../config.h
+
+../config.h:

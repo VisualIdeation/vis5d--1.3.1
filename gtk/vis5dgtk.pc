@@ -1,0 +1,11 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: Vis5d+ GTK
+Description: GTK User Interface for Vis5d+
+Version: 1.3.1
+Requires: vis5d+ gtk+
+Libs:  -L${libdir} -lvis5dgtk -lgradients  
+Cflags: 

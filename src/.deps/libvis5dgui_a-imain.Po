@@ -1,0 +1,3 @@
+libvis5dgui_a-imain.o libvis5dgui_a-imain.o: imain.c ../config.h
+
+../config.h:

@@ -1,0 +1,3 @@
+decimate.lo decimate.o: decimate.C ../config.h
+
+../config.h:

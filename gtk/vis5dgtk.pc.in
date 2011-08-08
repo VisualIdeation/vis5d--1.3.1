@@ -1,0 +1,11 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: Vis5d+ GTK
+Description: GTK User Interface for Vis5d+
+Version: @VERSION@
+Requires: vis5d+ gtk+
+Libs:  -L${libdir} -lvis5dgtk -lgradients @GTKGL_LIBS@ 
+Cflags: @GTKGL_CFLAGS@

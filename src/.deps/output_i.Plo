@@ -1,0 +1,222 @@
+output_i.lo output_i.o: output_i.c ../config.h /usr/include/assert.h \
+  /usr/include/features.h /usr/include/sys/cdefs.h \
+  /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+  /usr/include/gnu/stubs-64.h /usr/include/stdio.h \
+  /usr/lib/gcc/x86_64-redhat-linux/4.1.2/include/stddef.h \
+  /usr/include/bits/types.h /usr/include/bits/typesizes.h \
+  /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
+  /usr/include/bits/wchar.h /usr/include/gconv.h \
+  /usr/lib/gcc/x86_64-redhat-linux/4.1.2/include/stdarg.h \
+  /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+  /usr/include/bits/stdio.h /usr/include/stdlib.h \
+  /usr/include/sys/types.h /usr/include/time.h /usr/include/endian.h \
+  /usr/include/bits/endian.h /usr/include/sys/select.h \
+  /usr/include/bits/select.h /usr/include/bits/sigset.h \
+  /usr/include/bits/time.h /usr/include/sys/sysmacros.h \
+  /usr/include/bits/pthreadtypes.h /usr/include/alloca.h \
+  /usr/include/string.h /usr/include/bits/string.h \
+  /usr/include/bits/string2.h analyze_i.h grid_i.h v5d.h file_i.h \
+  memory.h globals.h /usr/include/X11/Xlib.h /usr/include/X11/X.h \
+  /usr/include/X11/Xfuncproto.h /usr/include/X11/Xosdefs.h \
+  /usr/include/GL/glx.h /usr/include/X11/Xutil.h \
+  /usr/include/X11/keysym.h /usr/include/X11/keysymdef.h \
+  /usr/include/GL/gl.h /usr/include/GL/glext.h /usr/include/GL/glxext.h \
+  /usr/include/stdint.h api.h api-config.h /usr/include/GL/glu.h \
+  /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
+  /usr/include/signal.h /usr/include/bits/setjmp.h matrix.h sync.h \
+  /usr/include/semaphore.h /usr/include/bits/semaphore.h vis5d.h \
+  irregular_v5d.h misc_i.h proj_i.h projlist_i.h grid.h resample_i.h \
+  gui.h ../lui5/lui.h /usr/include/X11/cursorfont.h ../lui5/browser.h \
+  ../lui5/list.h ../lui5/scrollbar.h ../lui5/field.h ../lui5/newbutton.h \
+  ../lui5/newbrowser.h ../lui5/newlist.h ../lui5/button.h \
+  ../lui5/buttonmatrix.h ../lui5/../src/v5d.h ../lui5/colorbar.h \
+  ../lui5/destroy.h ../lui5/dialog.h ../lui5/label.h ../lui5/layout.h \
+  ../lui5/newlabel.h ../lui5/newslider.h ../lui5/popup.h ../lui5/radio.h
+
+../config.h:
+
+/usr/include/assert.h:
+
+/usr/include/features.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/gnu/stubs.h:
+
+/usr/include/gnu/stubs-64.h:
+
+/usr/include/stdio.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.1.2/include/stddef.h:
+
+/usr/include/bits/types.h:
+
+/usr/include/bits/typesizes.h:
+
+/usr/include/libio.h:
+
+/usr/include/_G_config.h:
+
+/usr/include/wchar.h:
+
+/usr/include/bits/wchar.h:
+
+/usr/include/gconv.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.1.2/include/stdarg.h:
+
+/usr/include/bits/stdio_lim.h:
+
+/usr/include/bits/sys_errlist.h:
+
+/usr/include/bits/stdio.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/time.h:
+
+/usr/include/endian.h:
+
+/usr/include/bits/endian.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/bits/select.h:
+
+/usr/include/bits/sigset.h:
+
+/usr/include/bits/time.h:
+
+/usr/include/sys/sysmacros.h:
+
+/usr/include/bits/pthreadtypes.h:
+
+/usr/include/alloca.h:
+
+/usr/include/string.h:
+
+/usr/include/bits/string.h:
+
+/usr/include/bits/string2.h:
+
+analyze_i.h:
+
+grid_i.h:
+
+v5d.h:
+
+file_i.h:
+
+memory.h:
+
+globals.h:
+
+/usr/include/X11/Xlib.h:
+
+/usr/include/X11/X.h:
+
+/usr/include/X11/Xfuncproto.h:
+
+/usr/include/X11/Xosdefs.h:
+
+/usr/include/GL/glx.h:
+
+/usr/include/X11/Xutil.h:
+
+/usr/include/X11/keysym.h:
+
+/usr/include/X11/keysymdef.h:
+
+/usr/include/GL/gl.h:
+
+/usr/include/GL/glext.h:
+
+/usr/include/GL/glxext.h:
+
+/usr/include/stdint.h:
+
+api.h:
+
+api-config.h:
+
+/usr/include/GL/glu.h:
+
+/usr/include/pthread.h:
+
+/usr/include/sched.h:
+
+/usr/include/bits/sched.h:
+
+/usr/include/signal.h:
+
+/usr/include/bits/setjmp.h:
+
+matrix.h:
+
+sync.h:
+
+/usr/include/semaphore.h:
+
+/usr/include/bits/semaphore.h:
+
+vis5d.h:
+
+irregular_v5d.h:
+
+misc_i.h:
+
+proj_i.h:
+
+projlist_i.h:
+
+grid.h:
+
+resample_i.h:
+
+gui.h:
+
+../lui5/lui.h:
+
+/usr/include/X11/cursorfont.h:
+
+../lui5/browser.h:
+
+../lui5/list.h:
+
+../lui5/scrollbar.h:
+
+../lui5/field.h:
+
+../lui5/newbutton.h:
+
+../lui5/newbrowser.h:
+
+../lui5/newlist.h:
+
+../lui5/button.h:
+
+../lui5/buttonmatrix.h:
+
+../lui5/../src/v5d.h:
+
+../lui5/colorbar.h:
+
+../lui5/destroy.h:
+
+../lui5/dialog.h:
+
+../lui5/label.h:
+
+../lui5/layout.h:
+
+../lui5/newlabel.h:
+
+../lui5/newslider.h:
+
+../lui5/popup.h:
+
+../lui5/radio.h:
