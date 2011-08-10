@@ -14,10 +14,10 @@
 
 /* Define to a macro mangling the given C identifier (in lower and upper
    case), which must not contain underscores, for linking with Fortran. */
-#define F77_FUNC(name,INTL) name ## _
+/* #undef F77_FUNC */
 
 /* As F77_FUNC, but for C identifiers containing underscores. */
-#define F77_FUNC_(name,INTL) name ## __
+/* #undef F77_FUNC_ */
 
 /* Define if F77 and FC dummy `main' functions are identical. */
 /* #undef FC_DUMMY_MAIN_EQ_F77 */
@@ -57,13 +57,13 @@
 /* #undef HAVE_LIBMCIDAS_LIB */
 
 /* Do we have NetCDF library? */
-/* #undef HAVE_LIBNETCDF */
+#define HAVE_LIBNETCDF 1
 
 /* Define to 1 if you have the `png' library (-lpng). */
 #define HAVE_LIBPNG 1
 
 /* Have Tcl library? */
-#define HAVE_LIBTCL 1
+/* #undef HAVE_LIBTCL */
 
 /* Define to 1 if you have the `z' library (-lz). */
 #define HAVE_LIBZ 1
@@ -81,7 +81,7 @@
 /* #undef HAVE_MIXKIT_MIXIO_H */
 
 /* Define to 1 if you have the <netcdf.h> header file. */
-/* #undef HAVE_NETCDF_H */
+#define HAVE_NETCDF_H 1
 
 /* Define if we have OpenGL libraries. */
 #define HAVE_OPENGL 1
@@ -90,7 +90,7 @@
 /* #undef HAVE_PTHREAD */
 
 /* Have POSIX threads? */
-#define HAVE_PTHREADS 1
+/* #undef HAVE_PTHREADS */
 
 /* Define to 1 if you have the `setrlimit' function. */
 #define HAVE_SETRLIMIT 1
@@ -153,7 +153,7 @@
 /* #undef HAVE_XMESAGETBACKBUFFER */
 
 /* path to Image Magick convert program */
-/* #undef IMCONVERT */
+#define IMCONVERT "/usr/bin/convert"
 
 /* Have McIDAS sidecar? */
 /* #undef MCIDAS_SIDECAR */
@@ -181,7 +181,7 @@
 /* #undef PTHREAD_CREATE_JOINABLE */
 
 /* Define to disable multi-threading. */
-/* #undef SINGLE_TASK */
+#define SINGLE_TASK 1
 
 /* The size of `float', as computed by sizeof. */
 #define SIZEOF_FLOAT 4
@@ -205,7 +205,7 @@
 #define VIS5D_MAX_MEM 0
 
 /* where the source was built */
-#define VIS5D_SOURCE_DIR "/home/demo/workspace/vis5d+-1.3.1"
+#define VIS5D_SOURCE_DIR "/home/demo/workspace/vis5d--1.3.1"
 
 /* Define to 1 if your processor stores words with the most significant byte
    first (like Motorola and SPARC, unlike Intel and VAX). */

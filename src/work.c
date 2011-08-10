@@ -6979,7 +6979,11 @@ void set_hslice_pos(Context ctx, int var, hslice_request *request, float level)
 		  request->HighLimit = floor(request->HighLimit*factor)/(float) factor;
 		}
 	 }
-	 request->Interval = round((request->HighLimit - request->LowLimit)/5.0);
+/*
+ 08.08.2011 Modification PO'Leary Changed name to roundnice due to
+                                    name conflict
+*/
+	 request->Interval = roundnice((request->HighLimit - request->LowLimit)/5.0);
 	 
   }
 }

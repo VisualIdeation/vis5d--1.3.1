@@ -1,4 +1,4 @@
-select_i.lo select_i.o: select_i.c ../config.h grid_i.h
+select_i.lo: select_i.c ../config.h grid_i.h
 
 ../config.h:
 

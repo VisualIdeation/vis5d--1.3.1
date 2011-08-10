@@ -37,7 +37,12 @@
 
 extern void die( char *msg );
 
-extern float round( float x );
+/*
+ 08.08.2011 Modification PO'Leary Changed name to roundnice due to
+                                    name conflict
+*/
+
+extern float roundnice( float x );
 
 extern int which( char *file, char *fullpath );
 

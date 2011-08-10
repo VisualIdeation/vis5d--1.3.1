@@ -7,5 +7,5 @@ Name: Vis5d+
 Description: Vis5d OpenGL multidimensional visualization tool
 Version: 1.3.1
 Requires: 
-Libs: -L${libdir} -lvis5d -lv5d -lpng -lz -lm  -ltcl -ldl  -lGLU -lGL  -L/usr/lib64  -lSM -lICE -lXext -lX11 
-Cflags: -I${includedir}/vis5d+ -O3 -fomit-frame-pointer  -pthread 
+Libs: -L${libdir} -lvis5d -lv5d -lpng -lz -lm  -lnetcdf -ldl  -lGLU -lGL   -lSM -lICE -lXext -lX11 
+Cflags: -I${includedir}/vis5d+ -O3 -fomit-frame-pointer -malign-double  

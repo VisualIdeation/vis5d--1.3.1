@@ -144,10 +144,12 @@ int installed( char *program )
 
 
 
-/*** round ************************************************************
+/*** roundnice ************************************************************
    Round off x to a 'nice' value.
+   08.08.2011 Modification PO'Leary Changed name to roundnice due to
+                                    name conflict
 **********************************************************************/
-float round( float x )
+float roundnice( float x )
 {
    float base, fudge;
    int temp;
@@ -273,7 +275,11 @@ void init_graphics_pos( Context ctx, int var )
       ctx->Variable[var]->HSliceRequest->Interval = 0.0;
    }
    else {
-      ctx->Variable[var]->HSliceRequest->Interval = round( (ctx->Variable[var]->MaxVal - ctx->Variable[var]->MinVal)
+/*
+ 08.08.2011 Modification PO'Leary Changed name to roundnice due to
+                                    name conflict
+*/
+      ctx->Variable[var]->HSliceRequest->Interval = roundnice( (ctx->Variable[var]->MaxVal - ctx->Variable[var]->MinVal)
                                         / 10.0 );
    }
 
@@ -309,7 +315,11 @@ void init_graphics_pos( Context ctx, int var )
       ctx->Variable[var]->VSliceRequest->Interval = 0.0;
    }
    else {
-      ctx->Variable[var]->VSliceRequest->Interval = round( (ctx->Variable[var]->MaxVal - ctx->Variable[var]->MinVal)
+/*
+ 08.08.2011 Modification PO'Leary Changed name to roundnice due to
+                                    name conflict
+*/
+      ctx->Variable[var]->VSliceRequest->Interval = roundnice( (ctx->Variable[var]->MaxVal - ctx->Variable[var]->MinVal)
                                         / 10.0 );
    }
 

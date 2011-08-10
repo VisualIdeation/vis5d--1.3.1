@@ -1,42 +1,43 @@
-libvis5dgui_a-rgbsliders.o libvis5dgui_a-rgbsliders.o: rgbsliders.c \
-  ../config.h /usr/include/stdio.h /usr/include/features.h \
-  /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
-  /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h \
-  /usr/lib/gcc/x86_64-redhat-linux/4.1.2/include/stddef.h \
-  /usr/include/bits/types.h /usr/include/bits/typesizes.h \
-  /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/include/bits/wchar.h /usr/include/gconv.h \
-  /usr/lib/gcc/x86_64-redhat-linux/4.1.2/include/stdarg.h \
-  /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
-  /usr/include/bits/stdio.h /usr/include/string.h \
-  /usr/include/bits/string.h /usr/include/bits/string2.h \
-  /usr/include/endian.h /usr/include/bits/endian.h /usr/include/stdlib.h \
-  /usr/include/X11/Xlib.h /usr/include/sys/types.h /usr/include/time.h \
-  /usr/include/sys/select.h /usr/include/bits/select.h \
-  /usr/include/bits/sigset.h /usr/include/bits/time.h \
-  /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
-  /usr/include/X11/X.h /usr/include/X11/Xfuncproto.h \
-  /usr/include/X11/Xosdefs.h ../lui5/lui.h /usr/include/X11/Xlib.h \
-  /usr/include/X11/Xutil.h /usr/include/X11/keysym.h \
-  /usr/include/X11/keysymdef.h /usr/include/X11/cursorfont.h \
-  ../lui5/browser.h ../lui5/list.h ../lui5/scrollbar.h ../lui5/field.h \
-  ../lui5/newbutton.h ../lui5/newbrowser.h ../lui5/newlist.h \
-  ../lui5/button.h ../lui5/buttonmatrix.h ../lui5/../src/v5d.h \
-  ../lui5/colorbar.h ../lui5/destroy.h ../lui5/dialog.h ../lui5/label.h \
-  ../lui5/layout.h ../lui5/newlabel.h ../lui5/newslider.h ../lui5/popup.h \
-  ../lui5/radio.h api.h api-config.h /usr/include/GL/gl.h \
-  /usr/include/GL/glext.h /usr/include/GL/glu.h /usr/include/GL/glx.h \
-  /usr/include/GL/glxext.h /usr/include/stdint.h v5d.h \
-  /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
-  /usr/include/signal.h /usr/include/bits/setjmp.h globals.h matrix.h \
-  sync.h /usr/include/semaphore.h /usr/include/bits/semaphore.h vis5d.h \
-  irregular_v5d.h graphics.h gui.h mwmborder.h rgbsliders.h
+libvis5dgui_a-rgbsliders.o: rgbsliders.c ../config.h /usr/include/stdio.h \
+ /usr/include/features.h /usr/include/bits/predefs.h \
+ /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
+ /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.4.3/include/stddef.h \
+ /usr/include/bits/types.h /usr/include/bits/typesizes.h \
+ /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.4.3/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/bits/stdio.h /usr/include/bits/stdio2.h \
+ /usr/include/string.h /usr/include/xlocale.h /usr/include/bits/string.h \
+ /usr/include/bits/string2.h /usr/include/endian.h \
+ /usr/include/bits/endian.h /usr/include/bits/byteswap.h \
+ /usr/include/stdlib.h /usr/include/bits/string3.h \
+ /usr/include/X11/Xlib.h /usr/include/sys/types.h /usr/include/time.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/sigset.h /usr/include/bits/time.h \
+ /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/X11/X.h /usr/include/X11/Xfuncproto.h \
+ /usr/include/X11/Xosdefs.h ../lui5/lui.h /usr/include/X11/Xutil.h \
+ /usr/include/X11/keysym.h /usr/include/X11/keysymdef.h \
+ /usr/include/X11/cursorfont.h ../lui5/browser.h ../lui5/list.h \
+ ../lui5/scrollbar.h ../lui5/field.h ../lui5/newbutton.h \
+ ../lui5/newbrowser.h ../lui5/newlist.h ../lui5/button.h \
+ ../lui5/buttonmatrix.h ../lui5/../src/v5d.h ../lui5/colorbar.h \
+ ../lui5/destroy.h ../lui5/dialog.h ../lui5/label.h ../lui5/layout.h \
+ ../lui5/newlabel.h ../lui5/newslider.h ../lui5/popup.h ../lui5/radio.h \
+ api.h api-config.h /usr/include/GL/gl.h /usr/include/GL/glext.h \
+ /usr/include/inttypes.h /usr/include/stdint.h /usr/include/bits/wchar.h \
+ /usr/include/GL/glu.h /usr/include/GL/glx.h /usr/include/GL/glxext.h \
+ v5d.h globals.h matrix.h sync.h vis5d.h irregular_v5d.h graphics.h gui.h \
+ mwmborder.h rgbsliders.h
 
 ../config.h:
 
 /usr/include/stdio.h:
 
 /usr/include/features.h:
+
+/usr/include/bits/predefs.h:
 
 /usr/include/sys/cdefs.h:
 
@@ -46,7 +47,7 @@ libvis5dgui_a-rgbsliders.o libvis5dgui_a-rgbsliders.o: rgbsliders.c \
 
 /usr/include/gnu/stubs-64.h:
 
-/usr/lib/gcc/x86_64-redhat-linux/4.1.2/include/stddef.h:
+/usr/lib/gcc/x86_64-linux-gnu/4.4.3/include/stddef.h:
 
 /usr/include/bits/types.h:
 
@@ -58,11 +59,7 @@ libvis5dgui_a-rgbsliders.o libvis5dgui_a-rgbsliders.o: rgbsliders.c \
 
 /usr/include/wchar.h:
 
-/usr/include/bits/wchar.h:
-
-/usr/include/gconv.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/4.1.2/include/stdarg.h:
+/usr/lib/gcc/x86_64-linux-gnu/4.4.3/include/stdarg.h:
 
 /usr/include/bits/stdio_lim.h:
 
@@ -70,7 +67,11 @@ libvis5dgui_a-rgbsliders.o libvis5dgui_a-rgbsliders.o: rgbsliders.c \
 
 /usr/include/bits/stdio.h:
 
+/usr/include/bits/stdio2.h:
+
 /usr/include/string.h:
+
+/usr/include/xlocale.h:
 
 /usr/include/bits/string.h:
 
@@ -80,7 +81,11 @@ libvis5dgui_a-rgbsliders.o libvis5dgui_a-rgbsliders.o: rgbsliders.c \
 
 /usr/include/bits/endian.h:
 
+/usr/include/bits/byteswap.h:
+
 /usr/include/stdlib.h:
+
+/usr/include/bits/string3.h:
 
 /usr/include/X11/Xlib.h:
 
@@ -107,8 +112,6 @@ libvis5dgui_a-rgbsliders.o libvis5dgui_a-rgbsliders.o: rgbsliders.c \
 /usr/include/X11/Xosdefs.h:
 
 ../lui5/lui.h:
-
-/usr/include/X11/Xlib.h:
 
 /usr/include/X11/Xutil.h:
 
@@ -164,35 +167,25 @@ api-config.h:
 
 /usr/include/GL/glext.h:
 
+/usr/include/inttypes.h:
+
+/usr/include/stdint.h:
+
+/usr/include/bits/wchar.h:
+
 /usr/include/GL/glu.h:
 
 /usr/include/GL/glx.h:
 
 /usr/include/GL/glxext.h:
 
-/usr/include/stdint.h:
-
 v5d.h:
-
-/usr/include/pthread.h:
-
-/usr/include/sched.h:
-
-/usr/include/bits/sched.h:
-
-/usr/include/signal.h:
-
-/usr/include/bits/setjmp.h:
 
 globals.h:
 
 matrix.h:
 
 sync.h:
-
-/usr/include/semaphore.h:
-
-/usr/include/bits/semaphore.h:
 
 vis5d.h:
 
